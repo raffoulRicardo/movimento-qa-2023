@@ -1,0 +1,6 @@
+br/com/bluesoft/TesteQaApplication.class
+br/com/bluesoft/usuario/web/form/UsuarioForm.class
+br/com/bluesoft/usuario/domain/repository/UsuarioRepository.class
+br/com/bluesoft/usuario/web/controller/UsuarioController.class
+br/com/bluesoft/usuario/domain/Usuario.class
+br/com/bluesoft/usuario/web/view/UsuarioView.class
