@@ -28,7 +28,6 @@ public class formularioPage {
         browser.findElement(By.id("btn-salvar")).click();
     }
 
-
     public void fechar() {
         this.browser.quit();
     }
@@ -44,5 +43,19 @@ public class formularioPage {
         WebElement ColunaCelular = linhaDaTabela.findElement(By.cssSelector("td:nth-child(3)"));
         WebElement ColunaDataNascimento = linhaDaTabela.findElement(By.cssSelector("td:nth-child(4)"));
         return ColunaNome.getText().equals(nome) && ColunaCpf.getText().equals(cpf) && ColunaCelular.getText().equals(celular) && ColunaDataNascimento.getText().equals(DataNascimento);
+    }
+
+    public void excluirUsuarios() {
+        browser.findElement(By.id("btn_excluir")).click();
+
+    }
+
+    public boolean confereSeOsDadosNaoForamInseridosNaTabela(String vazio, String vazio1, String vazio2, String vazio3) {
+        WebElement linhaDaTabela = this.browser.findElement(By.cssSelector("#tabela-usuarios tbody"));
+        WebElement ColunaNome = linhaDaTabela.findElement(By.cssSelector("td:nth-child(1)"));
+        WebElement ColunaCpf = linhaDaTabela.findElement(By.cssSelector("td:nth-child(2)"));
+        WebElement ColunaCelular = linhaDaTabela.findElement(By.cssSelector("td:nth-child(3)"));
+        WebElement ColunaDataNascimento = linhaDaTabela.findElement(By.cssSelector("td:nth-child(4)"));
+        return ColunaNome.getText().equals(vazio) && ColunaCpf.getText().equals(vazio1) && ColunaCelular.getText().equals(vazio2) && ColunaDataNascimento.getText().equals(vazio3);
     }
 }
