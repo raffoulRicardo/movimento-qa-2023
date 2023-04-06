@@ -45,8 +45,8 @@
                     </tr>
                 </thead>
 
-                <tbody>
-                    <tr v-for="usuario in usuarios" :key="usuario.id">
+                <tbody id="tbl-dados">
+                    <tr  v-for="usuario in usuarios" :key="usuario.id">
                         <td>{{ usuario.nome }}</td>
                         <td>{{ usuario.cpf }}</td>
                         <td>{{ usuario.celular }}</td>
