@@ -21,7 +21,7 @@ public class formularioTest {
             }
 
             @Test
-            public void deveEfetuarRegistroComDadosValidos() {
+            public void dadoQueOFormularioSejaPreenchidoESubmetidoOsValoresDevemSerExibidosNaTabela() {
                 //preenche o formulario
                 paginaForm.preencherFormulario("fulano", "94904111641","11977051384","29/03/2004");
                 //efetua o registro
@@ -32,7 +32,7 @@ public class formularioTest {
                 paginaForm.excluirUsuarios();
             }
             @Test
-            public void deveRegistrarStringsVaziasNaTabelaCasoUmFormularioSejaSubmetidoComCamposNaoPreenchido(){
+            public void dadoQueOFormularioNaoSejaPreenchidoESubmtidoDeveExibirCamposVaziosNaTabela(){
                 //efetua o registro
                 paginaForm.efetuarRegistro();
                 //Confere se a tabela está vazia
@@ -40,5 +40,6 @@ public class formularioTest {
                 //excluir todos usuarios para que não influencie no proximo teste
                 paginaForm.excluirUsuarios();
             }
+            
 }
 
