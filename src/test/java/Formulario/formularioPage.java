@@ -22,11 +22,9 @@ public class formularioPage {
         browser.findElement(By.id("cpf")).sendKeys(cpf);
         browser.findElement(By.id("celular")).sendKeys(celular);
         browser.findElement(By.id("dt-nascimento")).sendKeys(dataNascimento);
-    }
-
-    public void efetuarRegistro() {
         browser.findElement(By.id("btn-salvar")).click();
     }
+
 
     public void fechar() {
         this.browser.quit();
@@ -57,5 +55,21 @@ public class formularioPage {
         WebElement ColunaCelular = linhaDaTabela.findElement(By.cssSelector("td:nth-child(3)"));
         WebElement ColunaDataNascimento = linhaDaTabela.findElement(By.cssSelector("td:nth-child(4)"));
         return ColunaNome.getText().equals(vazio) && ColunaCpf.getText().equals(vazio1) && ColunaCelular.getText().equals(vazio2) && ColunaDataNascimento.getText().equals(vazio3);
+    }
+
+    public void buscarCadastro(String nome) {
+
+        browser.findElement(By.id("input-search")).sendKeys(nome);
+        browser.findElement(By.id("btn-buscar")).click();
+    }
+
+    public boolean confereSeOCadastroEstaNaTabela(String nome, String cpf, String celular, String dataNascimento) {
+
+        WebElement linhaDaTabela = this.browser.findElement(By.cssSelector("#tabela-usuarios tbody"));
+        WebElement ColunaNome = linhaDaTabela.findElement(By.cssSelector("td:nth-child(1)"));
+        WebElement ColunaCpf = linhaDaTabela.findElement(By.cssSelector("td:nth-child(2)"));
+        WebElement ColunaCelular = linhaDaTabela.findElement(By.cssSelector("td:nth-child(3)"));
+        WebElement ColunaDataNascimento = linhaDaTabela.findElement(By.cssSelector("td:nth-child(4)"));
+        return ColunaNome.getText().equals(nome) && ColunaCpf.getText().equals(cpf) && ColunaCelular.getText().equals(celular) && ColunaDataNascimento.getText().equals(dataNascimento );
     }
 }
