@@ -45,7 +45,6 @@ public class formularioPage {
 
     public void excluirUsuarios() {
         browser.findElement(By.id("btn_excluir")).click();
-
     }
 
     public boolean confereSeOsDadosNaoForamInseridosNaTabela(String vazio, String vazio1, String vazio2, String vazio3) {
@@ -58,18 +57,21 @@ public class formularioPage {
     }
 
     public void buscarCadastro(String nome) {
-
         browser.findElement(By.id("input-search")).sendKeys(nome);
         browser.findElement(By.id("btn-buscar")).click();
     }
 
-    public boolean confereSeOCadastroEstaNaTabela(String nome, String cpf, String celular, String dataNascimento) {
-
+    public boolean confereSeOCadastroEstaNaTabela(String nome, String cpf,String celular, String DataNascimento) {
         WebElement linhaDaTabela = this.browser.findElement(By.cssSelector("#tabela-usuarios tbody"));
         WebElement ColunaNome = linhaDaTabela.findElement(By.cssSelector("td:nth-child(1)"));
         WebElement ColunaCpf = linhaDaTabela.findElement(By.cssSelector("td:nth-child(2)"));
         WebElement ColunaCelular = linhaDaTabela.findElement(By.cssSelector("td:nth-child(3)"));
         WebElement ColunaDataNascimento = linhaDaTabela.findElement(By.cssSelector("td:nth-child(4)"));
-        return ColunaNome.getText().equals(nome) && ColunaCpf.getText().equals(cpf) && ColunaCelular.getText().equals(celular) && ColunaDataNascimento.getText().equals(dataNascimento );
+        return ColunaNome.getText().equals(nome) && ColunaCpf.getText().equals(cpf) && ColunaCelular.getText().equals(celular) && ColunaDataNascimento.getText().equals(DataNascimento);
+    }
+    public boolean confereSeOCadastroNomeNaoEstaNaTabela(String nome,String cpf) {
+        WebElement linhaDaTabela = this.browser.findElement(By.cssSelector("#tabela-usuarios tbody"));
+        WebElement ColunaNome = linhaDaTabela.findElement(By.cssSelector("td:nth-child(1)"));
+        return ColunaNome.getText().equals(nome);
     }
 }
