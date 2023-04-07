@@ -1,21 +1,22 @@
-package Formulario;
+package Busca;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class formularioPage {
+public class buscaPage {
 
     private static final String URL_FORM = "http://localhost:8080/";
 
     private WebDriver browser;
 
-    public formularioPage() {
+    public buscaPage() {
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
         this.browser = new ChromeDriver();
         this.browser.navigate().to(URL_FORM);
     }
+
     public void preencherFormulario(String nome, String cpf, String celular, String dataNascimento) {
         browser.findElement(By.id("nome")).sendKeys(nome);
         browser.findElement(By.id("cpf")).sendKeys(cpf);
@@ -28,11 +29,16 @@ public class formularioPage {
         this.browser.quit();
     }
 
-    public void redirecionaParaPaginaConsulta() {
-        browser.findElement(By.id("consulta")).click();
+    public void excluirUsuarios() {
+        browser.findElement(By.id("btn_excluir")).click();
     }
 
-    public boolean confereSeOsDadosForamInseridosNaTabela(String nome, String cpf, String celular, String DataNascimento) {
+    public void buscarCadastro(String nome) {
+        browser.findElement(By.id("input-search")).sendKeys(nome);
+        browser.findElement(By.id("btn-buscar")).click();
+    }
+
+    public boolean confereSeOCadastroEstaNaTabela(String nome, String cpf, String celular, String DataNascimento) {
         WebElement linhaDaTabela = this.browser.findElement(By.cssSelector("#tabela-usuarios tbody"));
         WebElement ColunaNome = linhaDaTabela.findElement(By.cssSelector("td:nth-child(1)"));
         WebElement ColunaCpf = linhaDaTabela.findElement(By.cssSelector("td:nth-child(2)"));
@@ -41,18 +47,17 @@ public class formularioPage {
         return ColunaNome.getText().equals(nome) && ColunaCpf.getText().equals(cpf) && ColunaCelular.getText().equals(celular) && ColunaDataNascimento.getText().equals(DataNascimento);
     }
 
-    public void excluirUsuarios() {
-        browser.findElement(By.id("btn_excluir")).click();
-    }
+    public boolean confereSeOElementoDaTabelaNaoApareceNaPagina() {
+        boolean elementoPresente = false;
+        try {
+            WebElement elemento = this.browser.findElement(By.cssSelector("td:nth-child(1)"));
+            elementoPresente = true;
+        } catch (Exception e) {
+            elementoPresente = false;
 
-    public boolean confereSeOsDadosNaoForamInseridosNaTabela(String vazio, String vazio1, String vazio2, String vazio3) {
-        WebElement linhaDaTabela = this.browser.findElement(By.cssSelector("#tabela-usuarios tbody"));
-        WebElement ColunaNome = linhaDaTabela.findElement(By.cssSelector("td:nth-child(1)"));
-        WebElement ColunaCpf = linhaDaTabela.findElement(By.cssSelector("td:nth-child(2)"));
-        WebElement ColunaCelular = linhaDaTabela.findElement(By.cssSelector("td:nth-child(3)"));
-        WebElement ColunaDataNascimento = linhaDaTabela.findElement(By.cssSelector("td:nth-child(4)"));
-        return ColunaNome.getText().equals(vazio) && ColunaCpf.getText().equals(vazio1) && ColunaCelular.getText().equals(vazio2) && ColunaDataNascimento.getText().equals(vazio3);
+        }
+        return elementoPresente;
     }
-
 
 }
+
