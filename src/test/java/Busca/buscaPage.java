@@ -7,14 +7,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class buscaPage {
 
-    private static final String URL_FORM = "http://localhost:8080/";
+    private static final String URL_PAGINA = "http://localhost:8080/";
 
     private WebDriver browser;
 
     public buscaPage() {
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
         this.browser = new ChromeDriver();
-        this.browser.navigate().to(URL_FORM);
+        this.browser.navigate().to(URL_PAGINA);
     }
 
     public void preencherFormulario(String nome, String cpf, String celular, String dataNascimento) {
@@ -38,7 +38,7 @@ public class buscaPage {
         browser.findElement(By.id("btn-buscar")).click();
     }
 
-    public boolean confereSeOCadastroEstaNaTabela(String nome, String cpf, String celular, String DataNascimento) {
+    public boolean confereSeOsDadosForamInseridosNaTabela(String nome, String cpf, String celular, String DataNascimento) {
         WebElement linhaDaTabela = this.browser.findElement(By.cssSelector("#tabela-usuarios tbody"));
         WebElement ColunaNome = linhaDaTabela.findElement(By.cssSelector("td:nth-child(1)"));
         WebElement ColunaCpf = linhaDaTabela.findElement(By.cssSelector("td:nth-child(2)"));
@@ -46,7 +46,6 @@ public class buscaPage {
         WebElement ColunaDataNascimento = linhaDaTabela.findElement(By.cssSelector("td:nth-child(4)"));
         return ColunaNome.getText().equals(nome) && ColunaCpf.getText().equals(cpf) && ColunaCelular.getText().equals(celular) && ColunaDataNascimento.getText().equals(DataNascimento);
     }
-
     public boolean confereSeOElementoDaTabelaNaoApareceNaPagina() {
         boolean elementoPresente = false;
         try {
