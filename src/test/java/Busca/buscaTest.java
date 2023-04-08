@@ -21,7 +21,7 @@ public class buscaTest {
     //SEMPRE CHECAR SE A TABELA DO SITE NÃO CONTEM DADOS ANTES DE REALIZAR OS TESTE.
     //SE HOUVER DADOS NA TABELA UTILIZAR O BOTÃO EXCLUIR TODOS PARA EVITAR CONFLITO COM OS TESTES.
     @Test
-    public void dadoQueInsiraUmNomeRegistradoNoCampoDeBuscaEPressioneBuscarOsDadosSeraoExibidosNaTabela(){
+    public void Dado_que_Insira_um_Nome_Registrado_no_Campo_de_Busca_e_Pressione_Buscar_os_Dados_Serao_Exibidos_na_Tabela(){
         //preenche o formulario e submete formulario
         buscaPage.preencherFormulario("beltrano", "95904111362","11977051384","28/04/2002");
         buscaPage.preencherFormulario("fill", "959333311362","1198232322","22/04/2002");
@@ -33,12 +33,14 @@ public class buscaTest {
         buscaPage.excluirUsuarios();
     }
     @Test
-    public void dadoQueInsiraUmNomeNãoRegistradoNoCampoDeBuscaEPressioneBuscarNadaSeraExibido() {
+    public void Dado_Que_Insira_um_Nome_Não_Registrado_no_Campo_de_Busca_e_Pressione_Buscar_Nada_Sera_Exibido() {
         //Busca pelo cadastro através do nome
         buscaPage.buscarCadastro("claudinei");
         //confere se o elemento da tabela não aparece na pagina
-       Assert.assertFalse(buscaPage.confereSeOElementoDaTabelaNaoApareceNaPagina());
+        Assert.assertFalse(buscaPage.confereSeOElementoDaTabelaNaoApareceNaPagina());
         //excluir todos usuarios para que não influencie no proximo teste
         buscaPage.excluirUsuarios();
     }
+
+
 }
