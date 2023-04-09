@@ -16,6 +16,7 @@ public class excluirPage {
         this.browser = new ChromeDriver();
         this.browser.navigate().to(URL_PAGINA);
     }
+
     public void preencherFormulario(String nome, String cpf, String celular, String dataNascimento) {
         browser.findElement(By.id("nome")).sendKeys(nome);
         browser.findElement(By.id("cpf")).sendKeys(cpf);
@@ -23,9 +24,11 @@ public class excluirPage {
         browser.findElement(By.id("dt-nascimento")).sendKeys(dataNascimento);
         browser.findElement(By.id("btn-salvar")).click();
     }
+
     public void fechar() {
         this.browser.quit();
     }
+
     public void excluirUsuarios() {
         browser.findElement(By.id("btn_excluir")).click();
     }
@@ -38,16 +41,33 @@ public class excluirPage {
         WebElement ColunaDataNascimento = linhaDaTabela.findElement(By.cssSelector("td:nth-child(4)"));
         return ColunaNome.getText().equals(nome) && ColunaCpf.getText().equals(cpf) && ColunaCelular.getText().equals(celular) && ColunaDataNascimento.getText().equals(DataNascimento);
     }
+
     public boolean confereSeOElementoDaTabelaNaoApareceNaPagina() {
-        boolean elementoPresente = false;
+
+
+        boolean elementoPresente;
         try {
             WebElement elemento = this.browser.findElement(By.cssSelector("td:nth-child(1)"));
+            elemento.isDisplayed() ;
             elementoPresente = true;
         } catch (Exception e) {
             elementoPresente = false;
-
         }
         return elementoPresente;
+    }
+
+
+
+
+
+
+
+
+    public void maximixatela() {
+
+        this.browser.manage().window().maximize();
+
+
     }
 
 

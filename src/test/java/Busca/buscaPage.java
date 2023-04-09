@@ -47,7 +47,9 @@ public class buscaPage {
         return ColunaNome.getText().equals(nome) && ColunaCpf.getText().equals(cpf) && ColunaCelular.getText().equals(celular) && ColunaDataNascimento.getText().equals(DataNascimento);
     }
     public boolean confereSeOElementoDaTabelaNaoApareceNaPagina() {
-        boolean elementoPresente = false;
+
+
+        boolean elementoPresente;
         try {
             WebElement elemento = this.browser.findElement(By.cssSelector("td:nth-child(1)"));
             elementoPresente = true;
@@ -56,6 +58,13 @@ public class buscaPage {
 
         }
         return elementoPresente;
+    }
+
+    public void maximixatela() {
+
+        this.browser.manage().window().maximize();
+
+
     }
 
 }

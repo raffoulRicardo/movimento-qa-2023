@@ -13,6 +13,8 @@ public class buscaTest {
     @BeforeEach
     public void beforeEach() {
         this.paginaBusca = new buscaPage();
+        paginaBusca.maximixatela();
+
     }
     @AfterEach
     public void afterEach() {

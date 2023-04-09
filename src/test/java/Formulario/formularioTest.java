@@ -13,6 +13,7 @@ public class formularioTest {
             @BeforeEach
             public void beforeEach() {
                 this.paginaForm = new formularioPage();
+                paginaForm.maximixatela();
             }
             @AfterEach
             public void afterEach() {
@@ -42,6 +43,8 @@ public class formularioTest {
 
                 //excluir todos usuarios para que não influencie no proximo teste
                 paginaForm.excluirUsuarios();
+
+
             }
 }
 

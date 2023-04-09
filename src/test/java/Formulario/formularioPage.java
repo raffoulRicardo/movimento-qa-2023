@@ -52,7 +52,16 @@ public class formularioPage {
         WebElement ColunaCelular = linhaDaTabela.findElement(By.cssSelector("td:nth-child(3)"));
         WebElement ColunaDataNascimento = linhaDaTabela.findElement(By.cssSelector("td:nth-child(4)"));
         return ColunaNome.getText().equals(vazio) && ColunaCpf.getText().equals(vazio1) && ColunaCelular.getText().equals(vazio2) && ColunaDataNascimento.getText().equals(vazio3);
+
+
     }
 
+
+    public void maximixatela() {
+
+        this.browser.manage().window().maximize();
+
+
+    }
 
 }
