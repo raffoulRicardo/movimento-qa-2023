@@ -14,19 +14,14 @@ public class excluirTest {
         this.paginaExcluir = new excluirPage();
         paginaExcluir.maximixatela();
     }
-    @AfterEach
-    public void afterEach() {
-        this.paginaExcluir.fechar();
-    }
 
     @Test
     public void Dado_que_Tenha_Registros_na_Tabela_e_Pressione_o_Botao_Excluir_os_Registros_Deve_ser_Apagados(){
         //preenche o formulario e submete formulario
-        paginaExcluir.preencherFormulario("sergio", "923929392392","1198773222","28/04/2020");
-
-        //excluir todos usuarios
+        paginaExcluir.preencherFormulario("tavio","94904111340","11982125633","29/03/2004");
+        //excluir todos os usuarios
         paginaExcluir.excluirUsuarios();
-        //confere se o elemento da tabela não aparece na pagina
+        //verificar se os elementos de lista estao presente na pagina
         Assert.assertFalse(paginaExcluir.confereSeOElementoDaTabelaNaoApareceNaPagina());
     }
 }

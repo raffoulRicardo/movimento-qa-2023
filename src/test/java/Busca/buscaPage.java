@@ -47,17 +47,19 @@ public class buscaPage {
         return ColunaNome.getText().equals(nome) && ColunaCpf.getText().equals(cpf) && ColunaCelular.getText().equals(celular) && ColunaDataNascimento.getText().equals(DataNascimento);
     }
     public boolean confereSeOElementoDaTabelaNaoApareceNaPagina() {
-
-
-        boolean elementoPresente;
         try {
-            WebElement elemento = this.browser.findElement(By.cssSelector("td:nth-child(1)"));
-            elementoPresente = true;
+            WebElement primeiroTD = this.browser.findElement(By.cssSelector("td:nth-child(1)"));
+            WebElement segundoTD = this.browser.findElement(By.cssSelector("td:nth-child(2)"));
+            WebElement terceiroTD = this.browser.findElement(By.cssSelector("td:nth-child(3)"));
+            WebElement quartoTD = this.browser.findElement(By.cssSelector("td:nth-child(4)"));
+            boolean elementoExiste = primeiroTD.isDisplayed();
+            boolean elementoExiste2 = segundoTD.isDisplayed();
+            boolean elementoExiste3 = terceiroTD.isDisplayed();
+            boolean elementoExiste4 = quartoTD.isDisplayed();
+            return true;
         } catch (Exception e) {
-            elementoPresente = false;
-
+            return false;
         }
-        return elementoPresente;
     }
 
     public void maximixatela() {
