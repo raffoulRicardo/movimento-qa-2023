@@ -117,7 +117,7 @@ public class verificarTodosCampos {
         campoDataNascimento.sendKeys("bb/aa/adss");
 
         // Verifica se os preenchimentos inválidos acima, estão realmente iguais.
-        
+
         assertEquals("92839289", campoNome.getAttribute("value"));
         assertEquals("abc.def.hij-10", campoCPF.getAttribute("value"));
         assertEquals("(aa) bbbbb-9bbbb", campoCelular.getAttribute("value"));
@@ -131,9 +131,9 @@ public class verificarTodosCampos {
 
         WebElement tabela = driver.findElement(By.id("tabela-usuarios"));
         assertFalse(tabela.getText().contains("92839289"));
-        assertFalse(tabela.getText().contains("abc.def.hij-10");
-        assertFalse(tabela.getText().contains("(aa) bbbbb-9bbbb");
-        assertFalse(tabela.getText().contains("bb/aa/adss");
+        assertFalse(tabela.getText().contains("abc.def.hij-10"));
+        assertFalse(tabela.getText().contains("(aa) bbbbb-9bbbb"));
+        assertFalse(tabela.getText().contains("bb/aa/adss"));
     }
 
 
