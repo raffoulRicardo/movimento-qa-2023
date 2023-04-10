@@ -4,7 +4,7 @@
 
 
 
-## O que foi utilizado para desenvolvimento do projeto?
+## 📁 O que foi utilizado para desenvolvimento do projeto? 📁
 
 
 ![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white)
@@ -22,7 +22,7 @@
   ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge) 
 
 
-## Quais teste foram desenvolvidos 📑
+## 📑Quais teste foram desenvolvidos 📑
 
 ✔️ Testes para o campo de cadastro.
 
