@@ -18,8 +18,8 @@
 <p> Saiba mais sobre Selenium :https://www.devmedia.com.br/dominando-o-selenium-web-driver-na-pratica</p>
 
 <br><br><br>
-## Status do projeto
- :construction: ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge) :construction:
+##  :construction: Status do projeto  :construction:
+  ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge) 
 
 
 ## Quais teste foram desenvolvidos 📑
