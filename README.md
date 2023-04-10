@@ -19,7 +19,7 @@
 
 <br><br><br>
 ## Status do projeto
-![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=BLUE&style=for-the-badge)
+```EM ANDAMENTO```
 
 
 ## Quais testes foram desenvolvidos 📑
