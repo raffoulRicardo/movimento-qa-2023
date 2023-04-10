@@ -31,8 +31,10 @@ public class excluirTeste {
         //Pressiona o botão de excluir todos os usuarios.
         paginaExcluir.excluirUsuarios();
 
-        //verificar se os elementos de lista estao presente na pagina. (Caso positivo significa que há algo na tabela).
+        //verificar se os elementos de lista td:nth-child estao presente na pagina. (Caso positivo significa que há algo na tabela).
+        //Retornar falso
         Assert.assertFalse(paginaExcluir.confereSeOElementoDaTabelaApareceNaPagina());
 
     }
+
 }

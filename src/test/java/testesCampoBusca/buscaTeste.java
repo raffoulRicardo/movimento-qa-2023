@@ -34,7 +34,8 @@ public class buscaTeste {
 
         //Confere se os dados buscados estão presentes na tabela
         Assert.assertTrue(paginaBusca.confereSeOsDadosForamInseridosNaTabela("beltrano", "95904111362","11977051384","28/04/2002"));
-
+        //Retorna os dados da tabela para o console
+        paginaBusca.scrap();
         //excluir todos usuarios para não influenciar no proximo teste
         paginaBusca.excluirUsuarios();
     }
@@ -45,7 +46,8 @@ public class buscaTeste {
         //Busca pelo cadastro através do nome
         paginaBusca.buscarCadastro("claudinei");
 
-        //confere se o elemento da tabela não aparece na página
+        //verificar se os elementos de lista td:nth-child estao presente na pagina. (Caso positivo significa que há algo na tabela).
+        //Retornar falso
         Assert.assertFalse(paginaBusca.confereSeOElementoDaTabelaApareceNaPagina());
 
         //excluir todos usuarios para não influenciar no proximo teste

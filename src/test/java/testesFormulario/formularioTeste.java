@@ -29,6 +29,9 @@ public class formularioTeste {
                 //Confere se os dados cadastrados estão inseridos na tabela
                 Assert.assertTrue(paginaForm.confereSeOsDadosForamInseridosNaTabela("fulano", "94904111641","11977051384","29/03/2004"));
 
+                //Retorna os dados da tabela para o console
+                paginaForm.scrap();
+
                 //excluir todos usuarios para não influenciar no proximo teste
                 paginaForm.excluirUsuarios();
             }
@@ -42,6 +45,9 @@ public class formularioTeste {
                 //Confere se a tabela está vazia
                 Assert.assertTrue(paginaForm.confereSeOsDadosNaoForamInseridosNaTabela("", "","",""));
 
+                //Retorna os dados da tabela para o console
+                paginaForm.scrap();
+
                 //excluir todos usuarios para não influenciar no proximo teste
                 paginaForm.excluirUsuarios();
             }
@@ -51,7 +57,8 @@ public class formularioTeste {
         //preenche o formulario e submete formulario
         paginaForm.preencherFormulario("claudinho", "94904111641","11977051384","29/50/1500");
 
-        //confere se o elemento da tabela não aparece na página
+        //verificar se os elementos de lista td:nth-child estao presente na pagina. (Caso positivo significa que há algo na tabela).
+        //Retornar falso
         Assert.assertFalse(paginaForm.confereSeOElementoDaTabelaApareceNaPagina());
     }
 }

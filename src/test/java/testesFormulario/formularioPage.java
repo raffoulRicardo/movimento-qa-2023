@@ -67,5 +67,16 @@ public class formularioPage {
             return false;
         }
     }
+    public void scrap() {
+
+        WebElement element = this.browser.findElement(By.cssSelector("#tbl-dados tr"));
+
+        // Extrair o texto do elemento
+        String texto = element.getText();
+
+        // Imprimir o texto extraído
+        System.out.println("Texto extraído: " + texto);
+
+    }
 
 }

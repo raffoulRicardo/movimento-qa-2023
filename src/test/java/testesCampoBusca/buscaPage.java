@@ -67,6 +67,19 @@ public class buscaPage {
     //Maximixa o navegador
     public void maximixatela() {
         this.browser.manage().window().maximize();
+
+    }
+
+    public void scrap() {
+
+        WebElement element = this.browser.findElement(By.cssSelector("#tbl-dados tr"));
+
+        // Extrair o texto do elemento
+        String texto = element.getText();
+
+        // Imprimir o texto extraído
+        System.out.println("Texto extraído: " + texto);
+
     }
 
 }
