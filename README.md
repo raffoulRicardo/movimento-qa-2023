@@ -39,8 +39,6 @@
 
 ## O que é necessario para rodar o projeto?
 
-# teste-qa
-
 Para rodar o projeto após o download, basta rodar na raíz do projeto:
 
 mvn spring-boot:run
