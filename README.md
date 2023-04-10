@@ -10,9 +10,8 @@
 ![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white)
 <p> Saiba mais sobre a IDE:https://www.jetbrains.com/idea/</p>
 
-
-<p>![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white)  Saiba mais sobre JAVA:https://www.alura.com.br/artigos/java</p>
-
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white) 
+<p> Saiba mais sobre JAVA:https://www.alura.com.br/artigos/java</p>
 
 
 ![Badge](https://img.shields.io/static/v1?label=Selenium&message=WebDriver&color=blue&style=for-the-badge&logo=Selenium)
