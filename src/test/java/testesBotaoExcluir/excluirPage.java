@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class excluirPage {
     private static final String URL_PAGINA = "http://localhost:8080/";
     private WebDriver browser;
+
     public excluirPage() {
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
         this.browser = new ChromeDriver();
@@ -39,13 +40,14 @@ public class excluirPage {
             boolean elementoExiste2 = segundoTD.isDisplayed();
             boolean elementoExiste3 = terceiroTD.isDisplayed();
             boolean elementoExiste4 = quartoTD.isDisplayed();
-            return true;
+            return elementoExiste && elementoExiste2 && elementoExiste3 && elementoExiste4;
         } catch (Exception e) {
             return false;
         }
     }
+
     //Maximixa o navegador
-    public void maximixatela() {
+    public void maximixaTela() {
         this.browser.manage().window().maximize();
     }
 
@@ -62,4 +64,21 @@ public class excluirPage {
         }
     }
 
+    public boolean confereSeOsDadosForamInseridosNaTabela(String nome, String cpf, String celular, String DataNascimento) {
+        WebElement linhaDaTabela = this.browser.findElement(By.cssSelector("#tabela-usuarios tbody "));
+        WebElement ColunaNome = linhaDaTabela.findElement(By.cssSelector("td:nth-child(1)"));
+        WebElement ColunaCpf = linhaDaTabela.findElement(By.cssSelector("td:nth-child(2)"));
+        WebElement ColunaCelular = linhaDaTabela.findElement(By.cssSelector("td:nth-child(3)"));
+        WebElement ColunaDataNascimento = linhaDaTabela.findElement(By.cssSelector("td:nth-child(4)"));
+        return ColunaNome.getText().equals(nome) && ColunaCpf.getText().equals(cpf) && ColunaCelular.getText().equals(celular) && ColunaDataNascimento.getText().equals(DataNascimento);
+    }
+
+
+    public void esperar(int segundos) {
+        try {
+            Thread.sleep(segundos * 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 }

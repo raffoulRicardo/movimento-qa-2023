@@ -1,14 +1,13 @@
-package testesFormulario;
-
+package testesSite;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class formularioPage {
+public class sitePage {
     private static final String URL_PAGINA = "http://localhost:8080/";
     private WebDriver browser;
-    public formularioPage() {
+    public sitePage() {
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
         this.browser = new ChromeDriver();
         this.browser.navigate().to(URL_PAGINA);
@@ -39,24 +38,9 @@ public class formularioPage {
         this.browser.manage().window().maximize();
     }
 
-    public boolean confereSeOElementoDaTabelaApareceNaPagina() {
-        try {
-            WebElement primeiroTD = this.browser.findElement(By.cssSelector("td:nth-child(1)"));
-            WebElement segundoTD = this.browser.findElement(By.cssSelector("td:nth-child(2)"));
-            WebElement terceiroTD = this.browser.findElement(By.cssSelector("td:nth-child(3)"));
-            WebElement quartoTD = this.browser.findElement(By.cssSelector("td:nth-child(4)"));
-            boolean elementoExiste = primeiroTD.isDisplayed();
-            boolean elementoExiste2 = segundoTD.isDisplayed();
-            boolean elementoExiste3 = terceiroTD.isDisplayed();
-            boolean elementoExiste4 = quartoTD.isDisplayed();
-            return elementoExiste && elementoExiste2  && elementoExiste3  && elementoExiste4;
-        } catch (Exception e) {
-            return false;
-        }
-    }
+
     //Imprime os dados da tabela no console
     public void scrap() {
-
         WebElement element = this.browser.findElement(By.cssSelector("#tbl-dados tr"));
 
         // Extrair o texto do elemento
@@ -65,6 +49,7 @@ public class formularioPage {
         // Imprimir o texto extraído
         System.out.println("Texto extraído: " + texto);
     }
+
     public boolean clear() {
         try {
             WebElement deleteButton = this.browser.findElement(By.id("btn_excluir"));
@@ -77,12 +62,12 @@ public class formularioPage {
             return false;
         }
     }
-    public void esperar(int segundos) {
-        try {
-            Thread.sleep(segundos * 1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+   // Recarregar pagina 10x
+    public void RecarregarPagina() {
+        for (int i = 0; i < 10; i++) {
+            this.browser.navigate().refresh();
         }
+
     }
 
 }

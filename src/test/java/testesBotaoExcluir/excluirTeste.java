@@ -13,7 +13,7 @@ public class excluirTeste {
     @BeforeEach
     public void beforeEach() {
         this.paginaExcluir = new excluirPage();
-        paginaExcluir.maximixatela();
+        paginaExcluir.maximixaTela();
     }
 
     //Tudo que acontece ao terminar os testes
@@ -28,13 +28,18 @@ public class excluirTeste {
         //Preenche o formulario e o submete.
         paginaExcluir.preencherFormulario("tavio","94904111340","11982125633","29/03/2004");
 
+        //Confere se os dados foram inseridos na tabela
+        paginaExcluir.confereSeOsDadosForamInseridosNaTabela("tavio","94904111340","11982125633","29/03/2004");
+
+        //Espera 3 segundos antes de realizar a proxima ação
+        paginaExcluir.esperar(3);
+
         //Pressiona o botão de excluir todos os usuarios.
         paginaExcluir.clear();
 
-        //verificar se os elementos de lista td:nth-child estao presente na pagina. (Caso positivo significa que há algo na tabela).
+        //verificar se os elementos de lista td:nth-child estao presente na pagina. (Caso false significa que não há nada na tabela).
         //Retornar falso
         Assert.assertFalse(paginaExcluir.confereSeOElementoDaTabelaApareceNaPagina());
-
     }
 
 }

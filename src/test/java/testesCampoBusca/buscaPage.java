@@ -1,7 +1,6 @@
 package testesCampoBusca;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -61,14 +60,13 @@ public class buscaPage {
             boolean elementoExiste2 = segundoTD.isDisplayed();
             boolean elementoExiste3 = terceiroTD.isDisplayed();
             boolean elementoExiste4 = quartoTD.isDisplayed();
-            return true;
+            return elementoExiste && elementoExiste2  && elementoExiste3  && elementoExiste4;
         } catch (Exception e) {
             return false;
         }
     }
-
     //Maximixa o navegador
-    public void maximixatela() {
+    public void maximixTela() {
         this.browser.manage().window().maximize();
 
     }
@@ -86,7 +84,6 @@ public class buscaPage {
 
     }
 
-
     public boolean clear() {
         try {
             WebElement deleteButton = this.browser.findElement(By.id("btn_excluir"));
@@ -97,6 +94,14 @@ public class buscaPage {
             return true;
         } catch (Exception e) {
             return false;
+        }
+    }
+
+    public void esperar(int segundos) {
+        try {
+            Thread.sleep(segundos * 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 }

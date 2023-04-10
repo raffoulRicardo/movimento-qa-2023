@@ -13,7 +13,7 @@ public class buscaTeste {
     @BeforeEach
     public void beforeEach() {
         this.paginaBusca = new buscaPage();
-        paginaBusca.maximixatela();
+        paginaBusca.maximixTela();
     }
 
     //Tudo que acontece ao terminar os testes
@@ -25,9 +25,6 @@ public class buscaTeste {
     //Confere se o campo de busca retorna os dados corretos ao pesquisar por um registro valido
     @Test
     public void Dado_que_Insira_um_Nome_Registrado_no_Campo_de_Busca_e_Pressione_Buscar_os_Dados_Serao_Exibidos_na_Tabela(){
-        //verifica se há dados na tabela e caso positivo ele apaga para evitar conflito nos testes
-        paginaBusca.clear();
-
         //Preenche o formulario e submete o formulario
         paginaBusca.preencherFormulario("beltrano", "95904111362","11977051384","28/04/2002");
         paginaBusca.preencherFormulario("fill", "959333311362","1198232322","22/04/2002");
@@ -41,6 +38,8 @@ public class buscaTeste {
         //Retorna os dados da tabela para o console
         paginaBusca.scrap();
 
+        //Espera 3 segundos antes de realizar a proxima ação
+        paginaBusca.esperar(3);
         //verifica se há dados na tabela e caso positivo ele apaga para evitar conflito nos testes
         paginaBusca.clear();
     }
@@ -48,15 +47,15 @@ public class buscaTeste {
     //Confere se o campo de busca não retornará nada ao pesquisar um cadastro inexistente
     @Test
     public void Dado_que_Insira_um_Nome_nao_Registrado_no_Campo_de_Busca_e_Pressione_Buscar_Nada_Sera_Exibido() {
-        //verifica se há dados na tabela e caso positivo ele apaga para evitar conflito nos testes
-        paginaBusca.clear();
-
         //Busca pelo cadastro através do nome
         paginaBusca.buscarCadastro("claudinei");
 
-        //verificar se os elementos de lista td:nth-child estao presente na pagina. (Caso positivo significa que há algo na tabela).
+        //verificar se os elementos de lista td:nth-child estao presente na pagina. (Caso false significa que não há nada na tabela).
         //Retornar falso
         Assert.assertFalse(paginaBusca.confereSeOElementoDaTabelaApareceNaPagina());
+
+        //Espera 3 segundos antes de realizar a proxima ação
+        paginaBusca.esperar(3);
 
         //verifica se há dados na tabela e caso positivo ele apaga para evitar conflito nos testes
         paginaBusca.clear();
