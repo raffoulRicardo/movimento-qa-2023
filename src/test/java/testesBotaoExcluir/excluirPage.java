@@ -28,11 +28,6 @@ public class excluirPage {
         this.browser.quit();
     }
 
-    //Aperta o botão de excluir todos os usuarios
-    public void excluirUsuarios() {
-        browser.findElement(By.id("btn_excluir")).click();
-    }
-
     //Confere se os elementos estão presentes na página
     public boolean confereSeOElementoDaTabelaApareceNaPagina() {
         try {
@@ -52,6 +47,19 @@ public class excluirPage {
     //Maximixa o navegador
     public void maximixatela() {
         this.browser.manage().window().maximize();
+    }
+
+    public boolean clear() {
+        try {
+            WebElement deleteButton = this.browser.findElement(By.id("btn_excluir"));
+            WebElement primeiroTD = this.browser.findElement(By.cssSelector("td:nth-child(1)"));
+            if (primeiroTD.isDisplayed()) {
+                deleteButton.click();
+            }
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
     }
 
 }

@@ -25,6 +25,9 @@ public class buscaTeste {
     //Confere se o campo de busca retorna os dados corretos ao pesquisar por um registro valido
     @Test
     public void Dado_que_Insira_um_Nome_Registrado_no_Campo_de_Busca_e_Pressione_Buscar_os_Dados_Serao_Exibidos_na_Tabela(){
+        //verifica se há dados na tabela e caso positivo ele apaga para evitar conflito nos testes
+        paginaBusca.clear();
+
         //Preenche o formulario e submete o formulario
         paginaBusca.preencherFormulario("beltrano", "95904111362","11977051384","28/04/2002");
         paginaBusca.preencherFormulario("fill", "959333311362","1198232322","22/04/2002");
@@ -34,15 +37,20 @@ public class buscaTeste {
 
         //Confere se os dados buscados estão presentes na tabela
         Assert.assertTrue(paginaBusca.confereSeOsDadosForamInseridosNaTabela("beltrano", "95904111362","11977051384","28/04/2002"));
+
         //Retorna os dados da tabela para o console
         paginaBusca.scrap();
-        //excluir todos usuarios para não influenciar no proximo teste
-        paginaBusca.excluirUsuarios();
+
+        //verifica se há dados na tabela e caso positivo ele apaga para evitar conflito nos testes
+        paginaBusca.clear();
     }
 
     //Confere se o campo de busca não retornará nada ao pesquisar um cadastro inexistente
     @Test
     public void Dado_que_Insira_um_Nome_nao_Registrado_no_Campo_de_Busca_e_Pressione_Buscar_Nada_Sera_Exibido() {
+        //verifica se há dados na tabela e caso positivo ele apaga para evitar conflito nos testes
+        paginaBusca.clear();
+
         //Busca pelo cadastro através do nome
         paginaBusca.buscarCadastro("claudinei");
 
@@ -50,8 +58,7 @@ public class buscaTeste {
         //Retornar falso
         Assert.assertFalse(paginaBusca.confereSeOElementoDaTabelaApareceNaPagina());
 
-        //excluir todos usuarios para não influenciar no proximo teste
-        paginaBusca.excluirUsuarios();
+        //verifica se há dados na tabela e caso positivo ele apaga para evitar conflito nos testes
+        paginaBusca.clear();
     }
-
 }

@@ -1,6 +1,7 @@
 package testesCampoBusca;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -16,6 +17,7 @@ public class buscaPage {
         this.browser = new ChromeDriver();
         this.browser.navigate().to(URL_PAGINA);
     }
+
     //Preenche o formulario e o submete
     public void preencherFormulario(String nome, String cpf, String celular, String dataNascimento) {
         browser.findElement(By.id("nome")).sendKeys(nome);
@@ -24,21 +26,20 @@ public class buscaPage {
         browser.findElement(By.id("dt-nascimento")).sendKeys(dataNascimento);
         browser.findElement(By.id("btn-salvar")).click();
     }
+
     //Fecha a pagina
     public void fechar() {
         this.browser.quit();
     }
 
     //Aperta o botão de excluir usuarios
-    public void excluirUsuarios() {
-        browser.findElement(By.id("btn_excluir")).click();
-    }
 
     //Preenche o campo busca e aperta o botão buscar
     public void buscarCadastro(String nome) {
         browser.findElement(By.id("input-search")).sendKeys(nome);
         browser.findElement(By.id("btn-buscar")).click();
     }
+
     //Confere se os dados estão presente na tabela
     public boolean confereSeOsDadosForamInseridosNaTabela(String nome, String cpf, String celular, String DataNascimento) {
         WebElement linhaDaTabela = this.browser.findElement(By.cssSelector("#tabela-usuarios tbody "));
@@ -48,6 +49,7 @@ public class buscaPage {
         WebElement ColunaDataNascimento = linhaDaTabela.findElement(By.cssSelector("td:nth-child(4)"));
         return ColunaNome.getText().equals(nome) && ColunaCpf.getText().equals(cpf) && ColunaCelular.getText().equals(celular) && ColunaDataNascimento.getText().equals(DataNascimento);
     }
+
     //Confere se os elementos estão presentes na página
     public boolean confereSeOElementoDaTabelaApareceNaPagina() {
         try {
@@ -64,12 +66,14 @@ public class buscaPage {
             return false;
         }
     }
+
     //Maximixa o navegador
     public void maximixatela() {
         this.browser.manage().window().maximize();
 
     }
 
+    //Imprime os dados da tabela no console
     public void scrap() {
 
         WebElement element = this.browser.findElement(By.cssSelector("#tbl-dados tr"));
@@ -82,5 +86,27 @@ public class buscaPage {
 
     }
 
+
+    public boolean clear() {
+        try {
+            WebElement deleteButton = this.browser.findElement(By.id("btn_excluir"));
+            WebElement primeiroTD = this.browser.findElement(By.cssSelector("td:nth-child(1)"));
+            if (primeiroTD.isDisplayed()) {
+                deleteButton.click();
+            }
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
 

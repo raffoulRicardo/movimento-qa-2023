@@ -29,7 +29,7 @@ public class excluirTeste {
         paginaExcluir.preencherFormulario("tavio","94904111340","11982125633","29/03/2004");
 
         //Pressiona o botão de excluir todos os usuarios.
-        paginaExcluir.excluirUsuarios();
+        paginaExcluir.clear();
 
         //verificar se os elementos de lista td:nth-child estao presente na pagina. (Caso positivo significa que há algo na tabela).
         //Retornar falso

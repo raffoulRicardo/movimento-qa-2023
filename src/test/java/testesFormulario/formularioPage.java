@@ -35,9 +35,7 @@ public class formularioPage {
         return ColunaNome.getText().equals(nome) && ColunaCpf.getText().equals(cpf) && ColunaCelular.getText().equals(celular) && ColunaDataNascimento.getText().equals(DataNascimento);
     }
     //Aperta o botão de excluir usuarios
-    public void excluirUsuarios() {
-        browser.findElement(By.id("btn_excluir")).click();
-    }
+
     //Confere se os dados estão presente na tabela
     public boolean confereSeOsDadosNaoForamInseridosNaTabela(String vazio, String vazio1, String vazio2, String vazio3) {
         WebElement linhaDaTabela = this.browser.findElement(By.cssSelector("#tabela-usuarios tbody "));
@@ -67,6 +65,7 @@ public class formularioPage {
             return false;
         }
     }
+    //Imprime os dados da tabela no console
     public void scrap() {
 
         WebElement element = this.browser.findElement(By.cssSelector("#tbl-dados tr"));
@@ -77,6 +76,20 @@ public class formularioPage {
         // Imprimir o texto extraído
         System.out.println("Texto extraído: " + texto);
 
+
+    }
+
+    public boolean clear() {
+        try {
+            WebElement deleteButton = this.browser.findElement(By.id("btn_excluir"));
+            WebElement primeiroTD = this.browser.findElement(By.cssSelector("td:nth-child(1)"));
+            if (primeiroTD.isDisplayed()) {
+                deleteButton.click();
+            }
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
     }
 
 }
