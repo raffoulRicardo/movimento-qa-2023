@@ -32,7 +32,7 @@
 
 
 ### Criador: 
-|name|email|
+|Nome|E-MAIL|
 | -------- | -------- | 
 |Alisson Macedo|alissonmm61@gmail.com|
 
