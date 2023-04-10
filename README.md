@@ -21,7 +21,7 @@
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
 
-## O que a plataforma é capaz de fazer 📑// essa parte esta em desenvolvimento e será modificada
+## Quais teste foram desenvolvidos 📑// essa parte esta em desenvolvimento e será modificada
 
 ✔️ Gerar PDF do certificado com as informações preenchidas no formulário para cada participantes para envio de e-mail 
 
