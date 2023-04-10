@@ -27,9 +27,12 @@ public class excluirTeste {
     public void Dado_que_Tenha_Registros_na_Tabela_e_Pressione_o_Botao_Excluir_os_Registros_Deve_ser_Apagados(){
         //Preenche o formulario e o submete.
         paginaExcluir.preencherFormulario("tavio","94904111340","11982125633","29/03/2004");
+
         //Pressiona o botão de excluir todos os usuarios.
         paginaExcluir.excluirUsuarios();
+
         //verificar se os elementos de lista estao presente na pagina. (Caso positivo significa que há algo na tabela).
-        Assert.assertFalse(paginaExcluir.confereSeOElementoDaTabelaNaoApareceNaPagina());
+        Assert.assertFalse(paginaExcluir.confereSeOElementoDaTabelaApareceNaPagina());
+
     }
 }

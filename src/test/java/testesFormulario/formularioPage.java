@@ -25,12 +25,9 @@ public class formularioPage {
     public void fechar() {
         this.browser.quit();
     }
-    public void redirecionaParaPaginaConsulta() {
-        browser.findElement(By.id("consulta")).click();
-    }
     //Confere se os dados estão presente na tabela
     public boolean confereSeOsDadosForamInseridosNaTabela(String nome, String cpf, String celular, String DataNascimento) {
-        WebElement linhaDaTabela = this.browser.findElement(By.cssSelector("#tabela-usuarios tbody"));
+        WebElement linhaDaTabela = this.browser.findElement(By.cssSelector("#tabela-usuarios tbody tr:last-child "));
         WebElement ColunaNome = linhaDaTabela.findElement(By.cssSelector("td:nth-child(1)"));
         WebElement ColunaCpf = linhaDaTabela.findElement(By.cssSelector("td:nth-child(2)"));
         WebElement ColunaCelular = linhaDaTabela.findElement(By.cssSelector("td:nth-child(3)"));
@@ -43,7 +40,7 @@ public class formularioPage {
     }
     //Confere se os dados estão presente na tabela
     public boolean confereSeOsDadosNaoForamInseridosNaTabela(String vazio, String vazio1, String vazio2, String vazio3) {
-        WebElement linhaDaTabela = this.browser.findElement(By.cssSelector("#tabela-usuarios tbody"));
+        WebElement linhaDaTabela = this.browser.findElement(By.cssSelector("#tabela-usuarios tbody "));
         WebElement ColunaNome = linhaDaTabela.findElement(By.cssSelector("td:nth-child(1)"));
         WebElement ColunaCpf = linhaDaTabela.findElement(By.cssSelector("td:nth-child(2)"));
         WebElement ColunaCelular = linhaDaTabela.findElement(By.cssSelector("td:nth-child(3)"));
@@ -53,6 +50,22 @@ public class formularioPage {
     //Maximixa o navegador
     public void maximixatela() {
         this.browser.manage().window().maximize();
+    }
+
+    public boolean confereSeOElementoDaTabelaApareceNaPagina() {
+        try {
+            WebElement primeiroTD = this.browser.findElement(By.cssSelector("td:nth-child(1)"));
+            WebElement segundoTD = this.browser.findElement(By.cssSelector("td:nth-child(2)"));
+            WebElement terceiroTD = this.browser.findElement(By.cssSelector("td:nth-child(3)"));
+            WebElement quartoTD = this.browser.findElement(By.cssSelector("td:nth-child(4)"));
+            boolean elementoExiste = primeiroTD.isDisplayed();
+            boolean elementoExiste2 = segundoTD.isDisplayed();
+            boolean elementoExiste3 = terceiroTD.isDisplayed();
+            boolean elementoExiste4 = quartoTD.isDisplayed();
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
     }
 
 }

@@ -41,7 +41,7 @@ public class buscaPage {
     }
     //Confere se os dados estão presente na tabela
     public boolean confereSeOsDadosForamInseridosNaTabela(String nome, String cpf, String celular, String DataNascimento) {
-        WebElement linhaDaTabela = this.browser.findElement(By.cssSelector("#tabela-usuarios tbody"));
+        WebElement linhaDaTabela = this.browser.findElement(By.cssSelector("#tabela-usuarios tbody "));
         WebElement ColunaNome = linhaDaTabela.findElement(By.cssSelector("td:nth-child(1)"));
         WebElement ColunaCpf = linhaDaTabela.findElement(By.cssSelector("td:nth-child(2)"));
         WebElement ColunaCelular = linhaDaTabela.findElement(By.cssSelector("td:nth-child(3)"));
@@ -49,7 +49,7 @@ public class buscaPage {
         return ColunaNome.getText().equals(nome) && ColunaCpf.getText().equals(cpf) && ColunaCelular.getText().equals(celular) && ColunaDataNascimento.getText().equals(DataNascimento);
     }
     //Confere se os elementos estão presentes na página
-    public boolean confereSeOElementoDaTabelaNaoApareceNaPagina() {
+    public boolean confereSeOElementoDaTabelaApareceNaPagina() {
         try {
             WebElement primeiroTD = this.browser.findElement(By.cssSelector("td:nth-child(1)"));
             WebElement segundoTD = this.browser.findElement(By.cssSelector("td:nth-child(2)"));

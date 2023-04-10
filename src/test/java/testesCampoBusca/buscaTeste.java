@@ -46,7 +46,7 @@ public class buscaTeste {
         paginaBusca.buscarCadastro("claudinei");
 
         //confere se o elemento da tabela não aparece na página
-        Assert.assertFalse(paginaBusca.confereSeOElementoDaTabelaNaoApareceNaPagina());
+        Assert.assertFalse(paginaBusca.confereSeOElementoDaTabelaApareceNaPagina());
 
         //excluir todos usuarios para não influenciar no proximo teste
         paginaBusca.excluirUsuarios();

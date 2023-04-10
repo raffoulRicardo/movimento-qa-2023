@@ -45,5 +45,14 @@ public class formularioTeste {
                 //excluir todos usuarios para não influenciar no proximo teste
                 paginaForm.excluirUsuarios();
             }
+
+    @Test
+    public void Dado_que_o_Formulario_Seja_Preenchido_e_Submtido_Com_uma_Data_de_Nascimento_Invalida_Nao_Deve_Exibir_Nada_na_Tabela(){
+        //preenche o formulario e submete formulario
+        paginaForm.preencherFormulario("claudinho", "94904111641","11977051384","29/50/1500");
+
+        //confere se o elemento da tabela não aparece na página
+        Assert.assertFalse(paginaForm.confereSeOElementoDaTabelaApareceNaPagina());
+    }
 }
 

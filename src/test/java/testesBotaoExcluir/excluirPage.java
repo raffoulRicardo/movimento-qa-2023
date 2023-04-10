@@ -34,7 +34,7 @@ public class excluirPage {
     }
 
     //Confere se os elementos estão presentes na página
-    public boolean confereSeOElementoDaTabelaNaoApareceNaPagina() {
+    public boolean confereSeOElementoDaTabelaApareceNaPagina() {
         try {
             WebElement primeiroTD = this.browser.findElement(By.cssSelector("td:nth-child(1)"));
             WebElement segundoTD = this.browser.findElement(By.cssSelector("td:nth-child(2)"));
