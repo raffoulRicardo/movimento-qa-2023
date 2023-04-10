@@ -13,7 +13,7 @@
 
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white)
 
-<p> Saiba mais sobre JAVA#:https://learn.microsoft.com/pt-br/dotnet/csharp/tour-of-csharp/</p>
+<p> Saiba mais sobre JAVA:https://learn.microsoft.com/pt-br/dotnet/csharp/tour-of-csharp/</p>
 
 ![Badge](https://img.shields.io/static/v1?label=Selenium&message=WebDriver&color=blue&style=for-the-badge&logo=Selenium)
 <p> Saiba mais sobre Selenium :https://www.devmedia.com.br/dominando-o-selenium-web-driver-na-pratica</p>
