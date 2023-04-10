@@ -11,7 +11,7 @@
 ![Badge](https://img.shields.io/static/v1?label=VScode&message=IDE&color=blue&style=for-the-badge&logo=visual-VScode-app)
 <p> Link da IDE:https://visualstudio.microsoft.com</p>
 
-![Badge](https://img.shields.io/static/v1?label=Sharp&message=Linguagem&color=blue&style=for-the-badge&logo=JAVA)
+![Badge](https://img.shields.io/static/v1?label=Sharp&message=Linguagem&color=blue&style=for-the-badge&logo=Java)
 
 <p> Saiba mais sobre C#:https://learn.microsoft.com/pt-br/dotnet/csharp/tour-of-csharp/</p>
 
