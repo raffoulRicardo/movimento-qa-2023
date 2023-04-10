@@ -6,8 +6,7 @@
 
 ## 📁 O que foi utilizado para desenvolvimento do projeto? 📁
 
-
-![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?label=IDE&message=IDE&style=for-the-badge&logo=intellij-idea&logoColor=white)
+![Badge](https://img.shields.io/static/v1?label=Intellij&message=IDE&color=blue&style=for-the-badge&logo=intellij)
 <p> Saiba mais sobre a IDE:https://www.jetbrains.com/idea/</p>
 
 ![Badge](https://img.shields.io/static/v1?label=Java&message=Linguagem&color=blue&style=for-the-badge&logo=java)
