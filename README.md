@@ -18,6 +18,10 @@
 ![Badge](https://img.shields.io/static/v1?label=Selenium&message=WebDriver&color=blue&style=for-the-badge&logo=Selenium)
 <p> Saiba mais sobre Selenium :https://www.devmedia.com.br/dominando-o-selenium-web-driver-na-pratica</p>
 
+
+
+
+
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
 
