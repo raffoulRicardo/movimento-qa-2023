@@ -11,10 +11,13 @@
 [Saiba mais sobre a IDE](https://www.jetbrains.com/idea/) 
 
 ![Badge](https://img.shields.io/static/v1?label=Java&message=Linguagem&color=blue&style=for-the-badge&logo=java)
-<p> Saiba mais sobre JAVA:https://www.alura.com.br/artigos/java</p>
+<br>
+[Saiba mais sobre JAVA](https://www.alura.com.br/artigos/java) 
 
 ![Badge](https://img.shields.io/static/v1?label=Selenium&message=WebDriver&color=blue&style=for-the-badge&logo=Selenium)
-<p> Saiba mais sobre Selenium :https://www.devmedia.com.br/dominando-o-selenium-web-driver-na-pratica</p>
+<br>
+[Saiba mais sobre Selenium](https://www.devmedia.com.br/dominando-o-selenium-web-driver-na-pratica) 
+
 
 
 ##  :construction: Status do projeto  :construction:
