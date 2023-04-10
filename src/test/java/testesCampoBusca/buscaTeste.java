@@ -43,21 +43,21 @@ public class buscaTeste {
         //verifica se há dados na tabela e caso positivo ele apaga para evitar conflito nos testes
         paginaBusca.clear();
     }
+        @Test
+    public void Dado_que_o_Usuario_Pressione_obotaobuscarseminserirnenhumnomenaodeveraretornarnadanatabela(){
+            //Busca pelo cadastro através do nome
+            paginaBusca.buscarCadastro("claudinei");
 
-    //Confere se o campo de busca não retornará nada ao pesquisar um cadastro inexistente
-    @Test
-    public void Dado_que_Insira_um_Nome_nao_Registrado_no_Campo_de_Busca_e_Pressione_Buscar_Nada_Sera_Exibido() {
-        //Busca pelo cadastro através do nome
-        paginaBusca.buscarCadastro("claudinei");
+            //verificar se os elementos de lista td:nth-child estao presente na pagina. (Caso false significa que não há nada na tabela).
+            //Retornar falso
+            Assert.assertFalse(paginaBusca.confereSeOElementoDaTabelaApareceNaPagina());
 
-        //verificar se os elementos de lista td:nth-child estao presente na pagina. (Caso false significa que não há nada na tabela).
-        //Retornar falso
-        Assert.assertFalse(paginaBusca.confereSeOElementoDaTabelaApareceNaPagina());
+            //Espera 3 segundos antes de realizar a proxima ação
+            paginaBusca.esperar(3);
 
-        //Espera 3 segundos antes de realizar a proxima ação
-        paginaBusca.esperar(3);
+            //verifica se há dados na tabela e caso positivo ele apaga para evitar conflito nos testes
+            paginaBusca.clear();
 
-        //verifica se há dados na tabela e caso positivo ele apaga para evitar conflito nos testes
-        paginaBusca.clear();
-    }
+        }
+
 }

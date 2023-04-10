@@ -31,8 +31,6 @@ public class buscaPage {
         this.browser.quit();
     }
 
-    //Aperta o botão de excluir usuarios
-
     //Preenche o campo busca e aperta o botão buscar
     public void buscarCadastro(String nome) {
         browser.findElement(By.id("input-search")).sendKeys(nome);
