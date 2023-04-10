@@ -32,7 +32,7 @@
 
 
 ### Feito por: 
-|name|email|
+|Nome|E-mail|
 | -------- | -------- | 
 |Eduardo | luis.eduardo_96@outlook.com |
 
