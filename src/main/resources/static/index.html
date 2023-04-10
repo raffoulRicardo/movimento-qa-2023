@@ -32,7 +32,7 @@
                 <div class="form-group">
                     <input v-model="search" type="text" class="form-control" id="input-search" placeholder="Busca por nome">
                 </div>
-                <button v-on:click="buscarPorNome" class="btn btn-primary">Buscar</button>
+                <button v-on:click="buscarPorNome" class="btn btn-primary" id="buscar">Buscar</button>
             </form>
 
             <table id="tabela-usuarios" class="table">
@@ -55,7 +55,7 @@
                 </tbody>
             </table>
 
-            <button v-on:click="excluirTodosUsuarios" class="btn btn-danger">Excluir todos os usuários</button>
+            <button v-on:click="excluirTodosUsuarios" class="btn btn-danger" id="botao-excluir">Excluir todos os usuários</button>
         </div>
 
 
