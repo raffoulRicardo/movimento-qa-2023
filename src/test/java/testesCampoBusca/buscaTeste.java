@@ -43,8 +43,11 @@ public class buscaTeste {
         //verifica se há dados na tabela e caso positivo ele apaga para evitar conflito nos testes
         paginaBusca.clear();
     }
+
+
+        //Confere se não retornara nada caso o usuario pressione buscar sem preencher o campo de busca com um nome
         @Test
-    public void Dado_que_o_Usuario_Pressione_obotaobuscarseminserirnenhumnomenaodeveraretornarnadanatabela(){
+        public void Dado_que_o_Usuario_Pressione_o_Botao_Buscar_sem_Inserir_Nenhum_Nome_nao_Devera_Retornar_Nada_Na_Tabela(){
             //Busca pelo cadastro através do nome
             paginaBusca.buscarCadastro("claudinei");
 
