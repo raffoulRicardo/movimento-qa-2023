@@ -12,12 +12,12 @@
 
 <br>
 
- ```O movimento QA, tem o intuito, formar Testadores com foco na automação de testes.```
+ ```O Movimento QA, tem o intuito de formar Testadores com foco na automação de testes.```
 
 
 <br><br><br>
 ## Status do projeto
-> EM ANDAMENTO
+> EM DESENVOLVIMENTO
 
 
 ## Quais testes foram desenvolvidos 📑
