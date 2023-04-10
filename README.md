@@ -8,12 +8,12 @@
 
 //Em desenvolvimento sera modificado
 
-![Badge](https://img.shields.io/static/v1?label=VScode&message=IDE&color=blue&style=for-the-badge&logo=visual-VScode-app)
-<p> Link da IDE:https://visualstudio.microsoft.com</p>
+![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white)
+<p> Saiba mais sobre a IDE:https://visualstudio.microsoft.com</p>
 
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white)
 
-<p> Saiba mais sobre C#:https://learn.microsoft.com/pt-br/dotnet/csharp/tour-of-csharp/</p>
+<p> Saiba mais sobre JAVA#:https://learn.microsoft.com/pt-br/dotnet/csharp/tour-of-csharp/</p>
 
 ![Badge](https://img.shields.io/static/v1?label=Selenium&message=WebDriver&color=blue&style=for-the-badge&logo=Selenium)
 <p> Saiba mais sobre Selenium :https://www.devmedia.com.br/dominando-o-selenium-web-driver-na-pratica</p>
