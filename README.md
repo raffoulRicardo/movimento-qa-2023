@@ -1,6 +1,6 @@
 <h1 align="center"> Testes automatiazados para pagina WEB </h1>
 
-<h2 align="justify">Projeto criado no movimento QA 2023 bluesoft, onde tem como intuito automatizar testes de uma pagina web</h2>
+<h2 align="justify">Projeto criado no movimento QA 2023 bluesoft, onde tem como intuito automatizar testes de uma pagina web.</h2>
 
 
 
