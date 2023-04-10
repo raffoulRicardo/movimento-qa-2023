@@ -1,6 +1,6 @@
 <h1 align="center"> Testes automatiazados para pagina WEB </h1>
 
-<h2 align="justify">Projeto criado no movimento QA 2023 bluesoft, onde tem como intuito automatizar testes de uma pagina web.</h2>
+<h2 align="justify">Projeto criado no movimento QA 2023 Bluesoft, onde tem como intuito automatizar testes de uma pagina web.</h2>
 
 
 
@@ -19,7 +19,7 @@
 
 <br><br><br>
 ## Status do projeto
-![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
+ :construction: ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge) :construction:
 
 
 ## Quais teste foram desenvolvidos 📑
