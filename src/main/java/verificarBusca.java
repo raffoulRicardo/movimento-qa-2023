@@ -56,7 +56,8 @@ public class verificarBusca {
         WebElement botaoBuscar = driver.findElement(By.id("buscar"));
         botaoBuscar.click();
 
-
+        // A ideia desse teste, é ver se eu no campo de busca, eu consigo buscar o usuário por um de seus nomes.
+        // Retornando falso, como sabemos, não conseguimos buscar, isso seria um BUG/MELHORIA !?
         Assert.assertFalse(confereSeOElementoDaTabelaApareceNaPagina());
     }
 }
