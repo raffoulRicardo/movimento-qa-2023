@@ -2,12 +2,6 @@
 
 <h2 align="justify">Projeto criado no movimento QA 2023 Bluesoft, onde tem como intuito automatizar testes de uma pagina web.</h2>
 
-<h2 align="justify">Sobre mim</h2>
-<div>
-<a href="https://github.com/Alissonmac10">
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Alissonmac10&layout=compact&langs_count=7&theme=dracula"/>
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=Alissonmac10&show_icons=true&theme=dracula&include_all_commits=true&count_private=true"/>
-</div>
 
 ## 📁 O que foi utilizado para desenvolvimento do projeto? 📁
 
@@ -42,6 +36,14 @@
 |Nome|E-MAIL|
 | -------- | -------- | 
 |[Alisson Macedo](https://www.linkedin.com/in/alisson-macedo-629612262/) |alissonmm61@gmail.com|
+
+<h2 align="justify">Sobre mim</h2>
+<div>
+<a href="https://github.com/Alissonmac10">
+<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Alissonmac10&layout=compact&langs_count=7&theme=dracula"/>
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=Alissonmac10&show_icons=true&theme=dracula&include_all_commits=true&count_private=true"/>
+</div>
+
 
 
 ## O que é necessario para rodar o projeto?
