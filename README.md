@@ -5,18 +5,17 @@
 
 
 ## 📁 O que foi utilizado para desenvolvimento do projeto? 📁
-
-![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg&message=IDE?style=for-the-badge&logo=intellij-idea&logoColor=white)
+<br>
+![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white)
 <p> Saiba mais sobre a IDE:https://www.jetbrains.com/idea/</p>
-
+<br>
 ![Badge](https://img.shields.io/static/v1?label=Java&message=Linguagem&color=blue&style=for-the-badge&logo=java)
 <p> Saiba mais sobre JAVA:https://www.alura.com.br/artigos/java</p>
-
-
+<br>
 ![Badge](https://img.shields.io/static/v1?label=Selenium&message=WebDriver&color=blue&style=for-the-badge&logo=Selenium)
 <p> Saiba mais sobre Selenium :https://www.devmedia.com.br/dominando-o-selenium-web-driver-na-pratica</p>
 
-<br><br><br>
+<br>
 ##  :construction: Status do projeto  :construction:
   ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge) 
 
