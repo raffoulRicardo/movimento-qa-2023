@@ -24,7 +24,7 @@
   ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge) 
 
 
-## 📑Quais teste foram desenvolvidos 📑
+## 📑Quais testes foram desenvolvidos? 📑
 
 ✔️ Testes para o campo de cadastro.
 
@@ -36,7 +36,7 @@
 ### Criador: 
 |Nome|E-MAIL|
 | -------- | -------- | 
-|Alisson Macedo|alissonmm61@gmail.com|
+|[Alisson Macedo](https://www.linkedin.com/in/alisson-macedo-629612262/) |alissonmm61@gmail.com|
 
 
 ## O que é necessario para rodar o projeto?
