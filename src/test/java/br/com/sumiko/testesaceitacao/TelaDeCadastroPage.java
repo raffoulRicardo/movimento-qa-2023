@@ -1,5 +1,10 @@
 package br.com.sumiko.testesaceitacao;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+import static br.com.sumiko.testesaceitacao.DriverFactory.getDriver;
+
 public class TelaDeCadastroPage {
 
     public DSL dsl;
@@ -24,26 +29,19 @@ public class TelaDeCadastroPage {
         dsl.escrever("dt-nascimento", dtNascimento);
     }
 
-
     public void salvar() {
         dsl.clicarBotao("btn-salvar");
     }
 
-
-    public String obterNomeCadastro() {
-        return dsl.obterConteudoCelula("//table/tbody/tr/td[1]");
+    public void setNomeBusca(String nomeBusca) {
+        dsl.escrever("input-search", nomeBusca);
     }
 
-    public String obterCPFCadastro() {
-        return dsl.obterConteudoCelula("//table/tbody/tr/td[2]");
-    }
-
-    public String obterCelularCadastro() {
-        return dsl.obterConteudoCelula("//table/tbody/tr/td[3]");
-    }
-
-    public String obterDataNascimentoCadastro() {
-        return dsl.obterConteudoCelula("//table/tbody/tr/td[4]");
+    public void buscar() {
+        dsl.clicarBotao("buscar");
     }
 
 }
+
+
+
