@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Márcia\\Desktop\\Desafio\\movimento-qa-2023\\movimento-qa-2023.csproj": {}
+    "c:\\Users\\Márcia\\Desktop\\Desafio\\movimento-qa-2023\\movimento-qa-2023.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Márcia\\Desktop\\Desafio\\movimento-qa-2023\\movimento-qa-2023.csproj": {
+    "c:\\Users\\Márcia\\Desktop\\Desafio\\movimento-qa-2023\\movimento-qa-2023.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Márcia\\Desktop\\Desafio\\movimento-qa-2023\\movimento-qa-2023.csproj",
+        "projectUniqueName": "c:\\Users\\Márcia\\Desktop\\Desafio\\movimento-qa-2023\\movimento-qa-2023.csproj",
         "projectName": "movimento-qa-2023",
-        "projectPath": "C:\\Users\\Márcia\\Desktop\\Desafio\\movimento-qa-2023\\movimento-qa-2023.csproj",
+        "projectPath": "c:\\Users\\Márcia\\Desktop\\Desafio\\movimento-qa-2023\\movimento-qa-2023.csproj",
         "packagesPath": "C:\\Users\\Márcia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Márcia\\Desktop\\Desafio\\movimento-qa-2023\\obj\\",
+        "outputPath": "c:\\Users\\Márcia\\Desktop\\Desafio\\movimento-qa-2023\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

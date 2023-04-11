@@ -1,11 +1,19 @@
 # teste-qa
 
-<h1>Teste realizado usando C# - Selenium - VSCode</h>
+Teste realizado usando C# - Selenium - VSCode
 
-<p>Os testes estão localizados na pasta (testsaplicacao => test)</p>
+Os testes estão localizados na pasta (testsaplicacao => test)
 
-<p>O navegador utilizado foi o Google Chrome ver. 12.0.5615.50 64 bits
-e o sistema operacional usado foi o Windows 10.</p>
+Pode ser que seja necessário utilizar os seguintes códigos no terminal do VSCode:
+
+dotnet restore
+e
+dotnet build
+
+Para poder realizar a copilação com êxito.
+
+O navegador utilizado foi o Google Chrome ver. 112.0.5615.50 64 bits
+e o sistema operacional usado foi o Windows 10.
 
 Para rodar o projeto após o download, basta rodar na raíz do projeto:
 

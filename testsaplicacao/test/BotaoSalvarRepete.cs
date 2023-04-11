@@ -39,7 +39,7 @@ namespace Movimento.Selenium.Testes
 
 
             //assert 
-            Assert.NotNull(driver.FindElements(By.XPath("//tbody/tr[5]/td[1]")));
+            Assert.NotEmpty(driver.FindElements(By.CssSelector("#tabela2")));
         }
     }
 }

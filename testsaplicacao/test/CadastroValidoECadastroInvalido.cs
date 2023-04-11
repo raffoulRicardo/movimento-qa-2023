@@ -68,7 +68,7 @@ namespace Movimento.Selenium.Testes
             
 
             //assert
-            Assert.NotNull(driver.FindElements(By.XPath("tbody")));
+            Assert.Single(driver.FindElements(By.Id("tabela2")));
         }
     }
 }

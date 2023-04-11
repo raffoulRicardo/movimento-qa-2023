@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Er7eKiNKh9M4iu2d3xe5JUNBTHlSCzhYNmuqPdbGHihtapzt5h1O+lvAzwW2RbouTaE1fX0utehdAwP//9ucvQ==",
+  "dgSpecHash": "mjcGzkiJ9iTFFu3r1fQabkiTDgnBLqUYdKaI1L7HuknIIk057WX7Idx8z+Qm8FKsnNeMnmbfBzo1TOxOY8p8jg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Márcia\\Desktop\\Desafio\\movimento-qa-2023\\movimento-qa-2023.csproj",
+  "projectFilePath": "c:\\Users\\Márcia\\Desktop\\Desafio\\movimento-qa-2023\\movimento-qa-2023.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Márcia\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\Márcia\\.nuget\\packages\\microsoft.codecoverage\\17.5.0\\microsoft.codecoverage.17.5.0.nupkg.sha512",
