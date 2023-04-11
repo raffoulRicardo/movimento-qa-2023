@@ -55,7 +55,37 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-	</dependencies>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-chrome-driver</artifactId>
+			<version>3.141.59</version>
+		</dependency>
+
+		<dependency>
+			<groupId>Junit</groupId>
+			<artifactId>Junit</artifactId>
+			<version>4.13.2</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-support</artifactId>
+			<version>3.141.59</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.jetbrains</groupId>
+			<artifactId>annotations</artifactId>
+			<version>RELEASE</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>5.8.2</version>
+			<scope>test</scope>
+		</dependency>
+</dependencies>
 
 	<build>
 		<plugins>
