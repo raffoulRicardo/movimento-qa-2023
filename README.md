@@ -1,6 +1,6 @@
-<h1 align="center"> Testes automatiazados para pagina WEB </h1>
+<h1 align="center"> Testes automatizados para página WEB </h1>
 
-<h2 align="justify">Projeto criado no movimento QA 2023 Bluesoft, onde tem como intuito automatizar testes de uma pagina web.</h2>
+<h2 align="justify">Projeto criado no movimento QA 2023 Bluesoft, onde tem como intuito automatizar testes de uma página web.</h2>
 
 
 ## 📁 O que foi utilizado para desenvolvimento do projeto? 📁
@@ -29,9 +29,9 @@
 
 ✔️ Testes para o campo de busca.
 
-✔️ Testes para o campo de excluir usuarios.
+✔️ Testes para o campo de excluir usuários.
 
-## O que é necessario para rodar o projeto?
+## O que é necessário para rodar o projeto?
 
 Para rodar o projeto após o download, basta rodar na raíz do projeto:
 
