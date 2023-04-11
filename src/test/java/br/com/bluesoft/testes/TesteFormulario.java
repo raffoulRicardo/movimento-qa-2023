@@ -1,70 +1,46 @@
 package br.com.bluesoft.testes;
 
+import br.com.bluesoft.metodos.Metodos;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.util.concurrent.TimeUnit;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
-public class TesteFormulario {
-
-    WebDriver driver;
+public class TesteFormulario extends Metodos {
 
     @BeforeEach
     public void setUp() throws Exception {
-        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("http://localhost:8080/");
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        iniciarNavegador("http://localhost:8080/");
     }
+
     @AfterEach
-    public void tearDown() throws Exception {
-        driver.quit();
+    public void tearDown() {
+        encerrarNavegador(driver);
     }
 
     @Test
-    public void validandoFormularioComDadosVálidos () {
+    public void validandoFormularioComDadosValidos() {
 
-        driver.findElement(By.xpath("//input[@id='nome']")).sendKeys("Miguel Gama da Silva Muniz");
-        driver.findElement(By.xpath("//input[@id='cpf']")).sendKeys("348.766.080-67");
-        driver.findElement(By.xpath("//input[@id='celular']")).sendKeys("(11) 97693-8588)");
-        driver.findElement(By.xpath("//input[@id='dt-nascimento']")).sendKeys("15/10/2000");
+        escrever(By.xpath("//input[@id='nome']"), "Miguel Gama da Silva Muniz");
+        escrever(By.xpath("//input[@id='cpf']"), "188.320.560-38");
+        escrever(By.xpath("//input[@id='celular']"), "(11) 97693-8588");
+        escrever(By.xpath("//input[@id='dt-nascimento']"), "15/10/2000");
 
-        String nomeRetornado = driver.findElement(By.xpath("//input[@id='nome']")).getAttribute("value");
-        String cpfRetornado = driver.findElement(By.xpath("//input[@id='cpf']")).getAttribute("value");
-        String celularRetornado = driver.findElement(By.xpath("//input[@id='celular']")).getAttribute("value");
-        String dataNascimentoRetornado = driver.findElement(By.xpath("//input[@id='dt-nascimento']")).getAttribute("value");
+        validarAtributo(By.xpath("//input[@id='nome']"), "value", "Miguel Gama da Silva Muniz");
+        validarAtributo(By.xpath("//input[@id='cpf']"), "value", "188.320.560-38");
+        validarAtributo(By.xpath("//input[@id='celular']"), "value", "(11) 97693-8588");
+        validarAtributo(By.xpath("//input[@id='dt-nascimento']"), "value", "15/10/2000");
 
-        assertEquals("Miguel Gama da Silva Muniz", nomeRetornado);
-        assertEquals("348.766.080-67", cpfRetornado);
-        assertEquals("(11) 97693-8588)", celularRetornado);
-        assertEquals("15/10/2000", dataNascimentoRetornado);
+        clicar(By.xpath("(//button[@class='btn btn-primary'])[1]"));
 
-        driver.findElement(By.xpath("(//button[@class='btn btn-primary'])[1]")).click();
+        escrever(By.xpath("//input[@id='input-search']"), "Miguel Gama da Silva Muniz");
+        clicar(By.xpath("(//button[@class='btn btn-primary'])[2]"));
 
-        driver.findElement(By.xpath("//input[@id='input-search']")).sendKeys("Miguel Gama da Silva Muniz");
+        validarTexto(By.xpath("(//td)[1]"), "Miguel Gama da Silva Muniz");
+        validarTexto(By.xpath("(//td)[2]"), "188.320.560-38");
+        validarTexto(By.xpath("(//td)[3]"), "(11) 97693-8588");
+        validarTexto(By.xpath("(//td)[4]"), "15/10/2000");
 
-        String nomePesquisado = driver.findElement(By.xpath("//input[@id='input-search']")).getAttribute("value");
-        assertEquals("Miguel Gama da Silva Muniz", nomePesquisado);
-
-        driver.findElement(By.xpath("(//button[@class='btn btn-primary'])[2]")).click();
-
-        String retornoColunaNome =  driver.findElement(By.xpath("(//td)[1]")).getText();
-        String retornoColunaCpf = driver.findElement(By.xpath("(//td)[2]")).getText();
-        String retornoColunaCelular = driver.findElement(By.xpath("(//td)[3]")).getText();
-        String retornoColunaDataNascimento = driver.findElement(By.xpath("(//td)[4]")).getText();
-
-        assertEquals("Miguel Gama da Silva Muniz", retornoColunaNome);
-        assertEquals("348.766.080-67", retornoColunaCpf);
-        assertEquals("(11) 97693-8588)", retornoColunaCelular);
-        assertEquals("15/10/2000", retornoColunaDataNascimento);
-
-        driver.findElement(By.xpath("//button[@class='btn btn-danger']")).click();
+        clicar(By.xpath("//button[@class='btn btn-danger']"));
     }
 }
