@@ -20,7 +20,7 @@
 
 
 ##  :construction: Status do projeto  :construction:
-  ![Badge Concluído](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge) 
+  ![Badge Concluído](http://img.shields.io/static/v1?label=STATUS&message=%20Concluído&color=GREEN&style=for-the-badge) 
 
 
 ## 📑Quais testes foram desenvolvidos? 📑
