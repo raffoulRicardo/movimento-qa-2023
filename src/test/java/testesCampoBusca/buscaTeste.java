@@ -1,13 +1,10 @@
 package testesCampoBusca;
-
-
 import org.junit.Assert;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class buscaTeste {
-
     private testesCampoBusca.buscaPage paginaBusca;
     //Tudo que acontece antes de iniciar os testes
     @BeforeEach
@@ -25,6 +22,7 @@ public class buscaTeste {
     //Confere se o campo de busca retorna os dados corretos ao pesquisar por um registro valido
     @Test
     public void Dado_que_Insira_um_Nome_Registrado_no_Campo_de_Busca_e_Pressione_Buscar_os_Dados_Serao_Exibidos_na_Tabela(){
+
         //Preenche o formulario e submete o formulario
         paginaBusca.preencherFormulario("beltrano", "95904111362","11977051384","28/04/2002");
         paginaBusca.preencherFormulario("fill", "959333311362","1198232322","22/04/2002");
@@ -43,7 +41,6 @@ public class buscaTeste {
         //verifica se há dados na tabela e caso positivo ele apaga para evitar conflito nos testes
         paginaBusca.clear();
     }
-
 
         //Confere se não retornara nada caso o usuario pressione buscar sem preencher o campo de busca com um nome
         @Test

@@ -8,7 +8,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class excluirPage {
     private static final String URL_PAGINA = "http://localhost:8080/";
     private WebDriver browser;
-
     public excluirPage() {
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
         this.browser = new ChromeDriver();
@@ -51,6 +50,7 @@ public class excluirPage {
         this.browser.manage().window().maximize();
     }
 
+    //Limpa a tabela de dados caso tenha algo lá.
     public boolean clear() {
         try {
             WebElement deleteButton = this.browser.findElement(By.id("btn_excluir"));
@@ -64,6 +64,7 @@ public class excluirPage {
         }
     }
 
+    //Confere se os dados estão presente nas linhas da tabela
     public boolean confereSeOsDadosForamInseridosNaTabela(String nome, String cpf, String celular, String DataNascimento) {
         WebElement linhaDaTabela = this.browser.findElement(By.cssSelector("#tabela-usuarios tbody "));
         WebElement ColunaNome = linhaDaTabela.findElement(By.cssSelector("td:nth-child(1)"));
@@ -73,7 +74,7 @@ public class excluirPage {
         return ColunaNome.getText().equals(nome) && ColunaCpf.getText().equals(cpf) && ColunaCelular.getText().equals(celular) && ColunaDataNascimento.getText().equals(DataNascimento);
     }
 
-
+    //Espera antes de realizar a proxima ação
     public void esperar(int segundos) {
         try {
             Thread.sleep(segundos * 1000);

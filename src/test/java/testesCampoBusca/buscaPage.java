@@ -63,6 +63,7 @@ public class buscaPage {
             return false;
         }
     }
+
     //Maximixa o navegador
     public void maximixTela() {
         this.browser.manage().window().maximize();
@@ -82,6 +83,7 @@ public class buscaPage {
 
     }
 
+    //Limpa a tabela de dados caso tenha algo lá.
     public boolean clear() {
         try {
             WebElement deleteButton = this.browser.findElement(By.id("btn_excluir"));
@@ -95,6 +97,7 @@ public class buscaPage {
         }
     }
 
+    //Espera antes de realizar proxima ação
     public void esperar(int segundos) {
         try {
             Thread.sleep(segundos * 1000);

@@ -20,9 +20,9 @@ public class formularioTeste {
             this.paginaForm.fechar();
             }
 
-            //Confere se ao efetuar um registro com dados validos eles serão exibidos na tabela.
+            //Confere se ao efetuar registro com dados validos eles serão exibidos na tabela.
             @Test
-            public void Dado_que_o_Formulario_Seja_Preenchido_e_Submetido_os_Valores_Devem_ser_Exibidos_na_Tabela() {
+            public void Dado_que_o_Formulario_Seja_Preenchido_e_Submetido_os_Dados_Devem_ser_Exibidos_na_Tabela() {
                 //Preenche o formulario e submete o formulario
                 paginaForm.preencherFormulario("fulano", "94904111641","11977051384","29/03/2004");
 
@@ -58,9 +58,9 @@ public class formularioTeste {
                 paginaForm.clear();
             }
 
-    @Test
-    public void Dado_que_o_Formulario_Seja_Preenchido_e_Submtido_Com_uma_Data_de_Nascimento_Invalida_Nao_Deve_Exibir_Nada_na_Tabela(){
-
+         //Teste se ao inserir uma data de nascimento invalida os dados não serão registrados na tabela.
+         @Test
+         public void Dado_que_o_Formulario_Seja_Preenchido_e_Submtido_Com_uma_Data_de_Nascimento_Invalida_nao_Deve_Exibir_Nada_na_Tabela(){
         //preenche o formulario e submete formulario
         paginaForm.preencherFormulario("claudinho", "94904111641","11977051384","29/50/1500");
 

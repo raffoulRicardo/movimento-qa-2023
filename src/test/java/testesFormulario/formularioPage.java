@@ -1,5 +1,4 @@
 package testesFormulario;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,6 +12,7 @@ public class formularioPage {
         this.browser = new ChromeDriver();
         this.browser.navigate().to(URL_PAGINA);
     }
+
     //Preenche o formulario e o submete
     public void preencherFormulario(String nome, String cpf, String celular, String dataNascimento) {
         browser.findElement(By.id("nome")).sendKeys(nome);
@@ -21,24 +21,28 @@ public class formularioPage {
         browser.findElement(By.id("dt-nascimento")).sendKeys(dataNascimento);
         browser.findElement(By.id("btn-salvar")).click();
     }
+
     //Fecha a pagina
     public void fechar() {
         this.browser.quit();
     }
+
     //Confere se os dados estão presente na tabela
     public boolean confereSeOsDadosForamInseridosNaTabela(String nome, String cpf, String celular, String DataNascimento) {
-        WebElement linhaDaTabela = this.browser.findElement(By.cssSelector("#tabela-usuarios tbody tr:last-child "));
+        WebElement linhaDaTabela = this.browser.findElement(By.cssSelector("#tabela-usuarios tbody tr"));
         WebElement ColunaNome = linhaDaTabela.findElement(By.cssSelector("td:nth-child(1)"));
         WebElement ColunaCpf = linhaDaTabela.findElement(By.cssSelector("td:nth-child(2)"));
         WebElement ColunaCelular = linhaDaTabela.findElement(By.cssSelector("td:nth-child(3)"));
         WebElement ColunaDataNascimento = linhaDaTabela.findElement(By.cssSelector("td:nth-child(4)"));
         return ColunaNome.getText().equals(nome) && ColunaCpf.getText().equals(cpf) && ColunaCelular.getText().equals(celular) && ColunaDataNascimento.getText().equals(DataNascimento);
     }
+
     //Maximixa o navegador
     public void maximixaTela() {
         this.browser.manage().window().maximize();
     }
 
+    //Confere se o elemento está presente na pagina, caso nao esteja retornará falso.
     public boolean confereSeOElementoDaTabelaApareceNaPagina() {
         try {
             WebElement primeiroTD = this.browser.findElement(By.cssSelector("td:nth-child(1)"));
@@ -54,6 +58,7 @@ public class formularioPage {
             return false;
         }
     }
+
     //Imprime os dados da tabela no console
     public void scrap() {
 
@@ -65,6 +70,8 @@ public class formularioPage {
         // Imprimir o texto extraído
         System.out.println("Texto extraído: " + texto);
     }
+
+    //Limpa a tabela de dados caso tenha algo lá
     public boolean clear() {
         try {
             WebElement deleteButton = this.browser.findElement(By.id("btn_excluir"));
@@ -77,6 +84,8 @@ public class formularioPage {
             return false;
         }
     }
+
+    //Espera antes de realizar proxima ação
     public void esperar(int segundos) {
         try {
             Thread.sleep(segundos * 1000);

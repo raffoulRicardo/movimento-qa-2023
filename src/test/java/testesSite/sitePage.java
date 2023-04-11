@@ -50,6 +50,7 @@ public class sitePage {
         System.out.println("Texto extraído: " + texto);
     }
 
+    //Limpa a tabela de dados caso tenha algo lá
     public boolean clear() {
         try {
             WebElement deleteButton = this.browser.findElement(By.id("btn_excluir"));
@@ -62,12 +63,22 @@ public class sitePage {
             return false;
         }
     }
+
    // Recarregar pagina 10x
     public void RecarregarPagina() {
         for (int i = 0; i < 10; i++) {
             this.browser.navigate().refresh();
         }
 
+    }
+
+    //Espera antes de realizar proxima ação
+    public void esperar(int segundos) {
+        try {
+            Thread.sleep(segundos * 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
 }
