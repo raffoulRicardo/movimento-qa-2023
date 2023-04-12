@@ -9,6 +9,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import static org.junit.Assert.*;
 
 
+
+
 public class verificarCamposSeparadamente {
 
 
@@ -31,6 +33,8 @@ public class verificarCamposSeparadamente {
             // Sair após teste finalizar!
                driver.quit();
         }
+
+
 
 
 

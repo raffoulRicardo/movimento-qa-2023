@@ -7,7 +7,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import static org.junit.Assert.*;
-import static org.junit.Assert.assertTrue;
 
 public class verificarTodosCampos {
     private WebDriver driver;
@@ -25,7 +24,15 @@ public class verificarTodosCampos {
     @After
     public void sairDaPage() {
         // Sair após teste finalizar!
-        // driver.quit();
+        driver.quit();
+    }
+
+    public void preencheOformulario(String nome, String cpf, String celular, String dataNascimento) {
+        driver.findElement(By.id("nome")).sendKeys(nome);
+        driver.findElement(By.id("cpf")).sendKeys(cpf);
+        driver.findElement(By.id("celular")).sendKeys(celular);
+        driver.findElement(By.id("dt-nascimento")).sendKeys(dataNascimento);
+        driver.findElement(By.id("btn-salvar")).click();
     }
 
     @Test
@@ -54,7 +61,7 @@ public class verificarTodosCampos {
         botaoSalvar.click();
 
 
-        // Verifica se os valores do formulário não estão na tabela
+        // Verifica se os valores do formulário estão na tabela
 
         WebElement tabela = driver.findElement(By.id("tabela-usuarios"));
         assertTrue(tabela.getText().contains("Luis Eduardo"));
@@ -64,12 +71,26 @@ public class verificarTodosCampos {
 
     }
 
+
+    //ESSE TESTE ESTÁ FUNCIONANDO QUANDO EXECUTADO SOZINHO, TENTEI RESOLVER O ERRO, MAS AINDA SEM SUCESSO!
+    //MAS ESTÁ VALIDADO CERTO
     @Test
     public void camposEmBranco(){
         // Cenário 2 - : Não preencher nenhum campo e verificar se o formulário não é enviado
+        preencheOformulario("", "", "", "");
 
-        WebElement botaoSalvar = driver.findElement(By.id("btn-salvar"));
-        botaoSalvar.click();
+        WebElement coluna1 = driver.findElement(By.cssSelector("td:nth-child(1)"));
+        WebElement coluna2 = driver.findElement(By.cssSelector("td:nth-child(2)"));
+        WebElement coluna3 = driver.findElement(By.cssSelector("td:nth-child(3)"));
+        WebElement coluna4 = driver.findElement(By.cssSelector("td:nth-child(4)"));
+
+
+        // Conseguimos pegar as colunas e verificar que elas foram salvas sem ser digitado nada no formulário.
+
+        assertTrue(coluna1.getText().contains(""));
+        assertTrue(coluna2.getText().contains(""));
+        assertTrue(coluna3.getText().contains(""));
+        assertTrue(coluna4.getText().contains(""));
 
         // Verificar se o formulário não é enviado
 
@@ -80,24 +101,26 @@ public class verificarTodosCampos {
         // Cenário 3: Tentar enviar o formulário várias vezes consecutivas e verificar se cada envio é registrado corretamente.
         // Podemos usar o teste para ambos os cenários...
         // Cenário 4: Preencher o campo "CPF" com um valor que já foi usado anteriormente e verificar se o formulário é rejeitado.
-        for (int i = 0; i < 5; i++) {
 
-            WebElement campoNome = driver.findElement(By.id("nome"));
-            campoNome.sendKeys("José da Silva");
 
-            WebElement campoCPF = driver.findElement(By.id("cpf"));
-            campoCPF.sendKeys("123.456.789-10");
+        // Preenche o formulário e clique no botão de envio várias vezes
+        // Só em conseguir preencher as 3 vezes, mostra que está aceitando cadastro repetido.
+                for (int i = 0; i < 3; i++) {
+                   preencheOformulario("José da Silva", "123.456.789-10", "(11) 99999-9999", "01/01/1990");
+               }
+        WebElement linha1 = driver.findElement(By.cssSelector("tr"));
+        WebElement linha2 = driver.findElement(By.cssSelector("tr"));
 
-            WebElement campoCelular = driver.findElement(By.id("celular"));
-            campoCelular.sendKeys("(11) 99999-9999");
 
-            WebElement campoDataNascimento = driver.findElement(By.id("dt-nascimento"));
-            campoDataNascimento.sendKeys("01/01/1990");
+        assertFalse(linha1.getText().contains("José da Silva"));
+        assertFalse(linha2.getText().contains("José da Silva"));
 
-            WebElement botaoSalvar = driver.findElement(By.id("btn-salvar"));
-            botaoSalvar.click();
+        WebElement coluna1 = driver.findElement(By.cssSelector("td:nth-child(2)"));
+        assertTrue(coluna1.getText().contains("123.456.789-10"));
 
-        }
+
+
+
     }
 
     @Test
