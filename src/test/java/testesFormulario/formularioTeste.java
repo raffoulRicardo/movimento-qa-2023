@@ -34,7 +34,6 @@ public class formularioTeste {
 
             //Confere se ao efetuar registro com dados validos eles serão exibidos na tabela.
             @Test
-            @Order(1)
             public void Dado_que_o_Formulario_Seja_Preenchido_e_Submetido_os_Dados_Devem_ser_Exibidos_na_Tabela() {
                 //Preenche o formulario e submete o formulario
                 paginaForm.preencherFormulario("Vinicius Samuel das Neves", "716.116.387-04","(69)98120-1604","08/01/1998");
@@ -61,7 +60,6 @@ public class formularioTeste {
 
          //Teste se ao inserir uma data de nascimento invalida os dados não serão registrados na tabela.
          @Test
-         @Order(2)
          public void Dado_que_o_Formulario_Seja_Preenchido_e_Submtido_Com_uma_Data_de_Nascimento_Invalida_nao_Deve_Exibir_Nada_na_Tabela(){
         //preenche o formulario e submete formulario
         paginaForm.preencherFormulario("Vinicius Samuel das Neves", "716.116.387-04","(69)98120-1604","29/50/1500");

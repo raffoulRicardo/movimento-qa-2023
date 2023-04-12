@@ -22,7 +22,6 @@ public class buscaTeste {
 
     //Confere se o campo de busca retorna os dados corretos ao pesquisar por um registro valido
     @Test
-    @Order(1)
     public void Dado_que_Insira_um_Nome_Registrado_no_Campo_de_Busca_e_Pressione_Buscar_os_Dados_Serao_Exibidos_na_Tabela(){
 
         //Preenche o formulario e submete o formulario
@@ -55,7 +54,6 @@ public class buscaTeste {
 
         //Confere se não retornara nada caso o usuario pressione buscar sem preencher o campo de busca com um nome
         @Test
-        @Order(2)
         public void Dado_que_o_Usuario_Pressione_o_Botao_Buscar_sem_Inserir_Nenhum_Nome_nao_Devera_Retornar_Nada_Na_Tabela(){
             //Busca pelo cadastro através do nome
             paginaBusca.buscarCadastro("Daniel Enrico Costa");

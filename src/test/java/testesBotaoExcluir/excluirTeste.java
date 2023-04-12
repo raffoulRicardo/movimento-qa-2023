@@ -2,6 +2,7 @@ package testesBotaoExcluir;
 import org.junit.Assert;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
 public class excluirTeste {
@@ -21,12 +22,15 @@ public class excluirTeste {
 
     //Testa se o botão excluir está funcionando corretamente.
     @Test
+    @Order(1)
     public void Dado_que_Tenha_Registros_na_Tabela_e_Pressione_o_Botao_Excluir_os_Registros_Devem_ser_Apagados(){
         //Preenche o formulario e o submete.
         paginaExcluir.preencherFormulario("Emanuel Juan Drumond","982.527.067-54","(71)98638-0592","10/02/1943");
 
         //Submete o formulario
         paginaExcluir.submeterFormulario();
+
+        paginaExcluir.esperar(1);
 
         //Confere se os dados estão presentes na tabela
         Assert.assertTrue(paginaExcluir.confereNomeNaTabela("Emanuel Juan Drumond"));
