@@ -48,8 +48,7 @@ namespace Movimento.Selenium.Testes
             //Excluir Formulário Após O Teste//
             botaoExcluirPO.ExcluiFormulario();
 
-           //assert Cadastros Excluídos//
-
+            //assert Cadastros Excluídos//
             Assert.Single(driver.FindElements(By.Id("tabela2")));
 
         }
