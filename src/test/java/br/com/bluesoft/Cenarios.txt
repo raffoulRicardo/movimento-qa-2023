@@ -2,15 +2,24 @@ CENÁRIOS DE TESTES
 
 Dado que o localhost:8080 esteja acessando a tela de cadastro
 
--> Preenchimento dos Campos
+-> Preenchimento dos Campos:
 TC001 - Deve preecher corretamente todos os campos; OK
 TC002 - Deve preencher o Campo "Nome Completo"; OK
 TC003 - Deve preencher o Campo "CPF"; OK
 TC004 - Deve preencher o Campo "Celular"; OK
 TC005 - Deve preencher o Campo "Data de nascimento"; OK
+
+-> Gravação dos Campos na tabela:
 TC006 - Dados preenchidos devem ser gravados na tabela ao clicar em "Salvar"; OK
-TC007 - Campo "CPF" preenchido deve estar visivel na tabela; OK
-TC008 - Deve Auto-Formatar Os Numeros No Preenchimento Correto Do Campo Celular; OK
-TC009 - Não deve aceitar letras no preenchimento do campo "Data de nascimento"; OK
+TC007 - Campo "Nome Completo" preenchido deve estar visivel na tabela; OK
+TC008 - Campo "CPF" preenchido deve estar visivel na tabela; OK
+TC009 - Campo "Celular" preenchido deve estar visivel na tabela; OK
+TC010 - Campo "Data de Nascimento" preenchido deve estar visivel na tabela; OK
+
+-> Busca de dados na tabela:
+TC011 - Deve localizar usuario ao digitar o nome no campo de busca e clicar em "Buscar"; OK
+
+-> Exclusão dos dados na tabela:
+TC012 - Os dados devem ser excluidos da tabela ao clicar em "Excluir todos os usuários"; OK
 
 
