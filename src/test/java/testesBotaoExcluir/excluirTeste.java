@@ -23,10 +23,10 @@ public class excluirTeste {
     @Test
     public void Dado_que_Tenha_Registros_na_Tabela_e_Pressione_o_Botao_Excluir_os_Registros_Devem_ser_Apagados(){
         //Preenche o formulario e o submete.
-        paginaExcluir.preencherFormulario("tavio","94904111340","11982125633","29/03/2004");
+        paginaExcluir.preencherFormulario("Emanuel Juan Drumond","982.527.067-54","(71)98638-0592","10/02/1943");
 
         //Confere se os dados foram inseridos na tabela.
-        paginaExcluir.confereSeOsDadosForamInseridosNaTabela("tavio","94904111340","11982125633","29/03/2004");
+        paginaExcluir.confereSeOsDadosForamInseridosNaTabela("Emanuel Juan Drumond","982.527.067-54","(71)98638-0592","10/02/1943");
 
         //Espera 3 segundos antes de realizar a proxima ação.
         paginaExcluir.esperar(3);
