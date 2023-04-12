@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class teste_campos {
+public class teste_navegador {
 
         @Test
         public void abrir_navegador() {
@@ -14,7 +14,7 @@ public class teste_campos {
 
         }
 
-        
+
 
 
 }
