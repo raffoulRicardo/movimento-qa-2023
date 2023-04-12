@@ -17,7 +17,7 @@
 
 <br><br><br>
 ## Status do projeto
-> EM DESENVOLVIMENTO
+> FINALIZADO
 
 
 ## Quais testes foram desenvolvidos 📑
