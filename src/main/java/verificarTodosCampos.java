@@ -24,7 +24,7 @@ public class verificarTodosCampos {
     @After
     public void sairDaPage() {
         // Sair após teste finalizar!
-        driver.quit();
+        //driver.quit();
     }
 
     public void preencheOformulario(String nome, String cpf, String celular, String dataNascimento) {
@@ -103,20 +103,24 @@ public class verificarTodosCampos {
         // Cenário 4: Preencher o campo "CPF" com um valor que já foi usado anteriormente e verificar se o formulário é rejeitado.
 
 
-        // Preenche o formulário e clique no botão de envio várias vezes
-        // Só em conseguir preencher as 3 vezes, mostra que está aceitando cadastro repetido.
+        // Preenche o formulário e clica no botão de envio várias vezes
                 for (int i = 0; i < 3; i++) {
                    preencheOformulario("José da Silva", "123.456.789-10", "(11) 99999-9999", "01/01/1990");
                }
-        WebElement linha1 = driver.findElement(By.cssSelector("tr"));
-        WebElement linha2 = driver.findElement(By.cssSelector("tr"));
+                // Serve para ver quantas vezes o formulárioa aguentar ser preenchido também.
+                // Peguei o a primeira linha e a ultima, e verifico se os nomes estão lá, se estiverem, o cadastro ta podendo ser feito várias vezes com os mesmos valores.
+        WebElement linha1 = driver.findElement(By.cssSelector("#tabela-usuarios > tbody > tr:nth-child(1) > td:nth-child(1)"));
+        WebElement linha3 = driver.findElement(By.cssSelector("#tabela-usuarios > tbody > tr:nth-child(2) > td:nth-child(1)"));
 
 
-        assertFalse(linha1.getText().contains("José da Silva"));
-        assertFalse(linha2.getText().contains("José da Silva"));
+        assertTrue(linha1.getText().contains("José da Silva"));
+        assertTrue(linha3.getText().contains("José da Silva"));
 
-        WebElement coluna1 = driver.findElement(By.cssSelector("td:nth-child(2)"));
-        assertTrue(coluna1.getText().contains("123.456.789-10"));
+            // Aqui estou pegando "a mesma coisa de cima" porém, estou verificando se pode ser feito com o mesmo CPF também...Um valor já usado.
+        WebElement linha1Cpf = driver.findElement(By.cssSelector("#tabela-usuarios > tbody > tr:nth-child(1) > td:nth-child(2)"));
+        WebElement linha3Cpf = driver.findElement(By.cssSelector("#tabela-usuarios > tbody > tr:nth-child(3) > td:nth-child(2)"));
+        assertTrue(linha1Cpf.getText().contains("123.456.789-10"));
+        assertTrue(linha3Cpf.getText().contains("123.456.789-10"));
 
 
 
