@@ -20,10 +20,10 @@
  <br>
  <br>
   :white_check_mark: Os seguintes testes foram realizados: <br>
-  -Teste de Cadastros Válidos e Inválidos.<br>
-  -Teste de Datas de Nascimentos Inválidos.<br>
-  -Teste de Busca de Cadastros Válidos e Inválidos.<br>
-  -Teste o Botão de Salvar.<br>
+  -Teste de Cadastros Válidos e Exclusão de Cadastros.<br>
+  <br>
+  -Teste de Busca de Cadastros Válidos.<br>
+  <br>
   </h3>
 
   
