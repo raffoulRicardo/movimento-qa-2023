@@ -30,8 +30,16 @@ namespace Movimento.Selenium.Testes
             cadastroPO.Visitar();
             cadastroPO.PreencheFormulario("Márcia Cristina Alves de Oliveira Silva",
              "115.443.166-58","(31) 98881-0650","06/09/1997");
+            cadastroPO.SubmeteFormulario();
+           
+            cadastroPO.Visitar();
+             cadastroPO.PreencheFormulario("Sônia Aparecida","123.456.789-10",
+             "(31) 99877-5912","12/10/1971");
+             cadastroPO.SubmeteFormulario();
 
-            //act
+             cadastroPO.Visitar();
+             cadastroPO.PreencheFormulario("Márcio Marcelo Alves da Silva",
+             "109.876.543-21","(31) 98885-0650","16/06/1972");
             cadastroPO.SubmeteFormulario();
 
             //assert
