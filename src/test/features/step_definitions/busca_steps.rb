@@ -51,3 +51,13 @@
   Quando('buscar pelo usuário cadastrado utilizando apenas letras minúsculas') do
     @driver.find_element(:id, "input-search").send_keys("joão da silva")
   end
+
+  Quando('clicar no botão Excluir todos os usuário') do
+    @driver.find_element(:xpath, '//*[@id="app"]/button').click
+  end
+
+  Então('o sistema deve excluir todos os usuários cadastrados') do
+    @table_user = @driver.find_element(:id, 'tabela-usuarios')
+    @rows_number = @table_user.find_elements(:tag_name, 'tr').count
+    expect(@rows_number).to eq(1)
+  end

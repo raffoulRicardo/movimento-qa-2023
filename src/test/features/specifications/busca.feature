@@ -22,3 +22,9 @@ Cenario: Busca por usuário sem utilizar letras maiúsculas
      Quando buscar pelo usuário cadastrado utilizando apenas letras minúsculas
      E clicar em Buscar
      Então o sistema deve retornar na tabela o usuário correspondente
+
+Cenario: Exclusão de usuário
+     Dado que o usuário tenha acesso à tela de Busca
+     E que existe um usuário cadastrado na tabela de usuários
+     Quando clicar no botão Excluir todos os usuário
+     Então o sistema deve excluir todos os usuários cadastrados
