@@ -25,8 +25,14 @@ public class excluirTeste {
         //Preenche o formulario e o submete.
         paginaExcluir.preencherFormulario("Emanuel Juan Drumond","982.527.067-54","(71)98638-0592","10/02/1943");
 
-        //Confere se os dados foram inseridos na tabela.
-        paginaExcluir.confereSeOsDadosForamInseridosNaTabela("Emanuel Juan Drumond","982.527.067-54","(71)98638-0592","10/02/1943");
+        //Submete o formulario
+        paginaExcluir.submeterFormulario();
+
+        //Confere se os dados estão presentes na tabela
+        Assert.assertTrue(paginaExcluir.confereNomeNaTabela("Emanuel Juan Drumond"));
+        Assert.assertTrue(paginaExcluir.confereCpfNaTabela("982.527.067-54"));
+        Assert.assertTrue(paginaExcluir.confereCelularNaTabela("(71)98638-0592"));
+        Assert.assertTrue(paginaExcluir.confereDataNascimentoNaTabela("10/02/1943"));
 
         //Espera 3 segundos antes de realizar a proxima ação.
         paginaExcluir.esperar(3);

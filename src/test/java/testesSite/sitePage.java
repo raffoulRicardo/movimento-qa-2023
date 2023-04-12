@@ -18,21 +18,12 @@ public class sitePage {
         browser.findElement(By.id("cpf")).sendKeys(cpf);
         browser.findElement(By.id("celular")).sendKeys(celular);
         browser.findElement(By.id("dt-nascimento")).sendKeys(dataNascimento);
-        browser.findElement(By.id("btn-salvar")).click();
     }
     //Fecha a pagina
     public void fechar() {
         this.browser.quit();
     }
-    //Confere se os dados estão presente na tabela
-    public boolean confereSeOsDadosForamInseridosNaTabela(String nome, String cpf, String celular, String DataNascimento) {
-        WebElement linhaDaTabela = this.browser.findElement(By.cssSelector("#tabela-usuarios tbody tr:last-child "));
-        WebElement ColunaNome = linhaDaTabela.findElement(By.cssSelector("td:nth-child(1)"));
-        WebElement ColunaCpf = linhaDaTabela.findElement(By.cssSelector("td:nth-child(2)"));
-        WebElement ColunaCelular = linhaDaTabela.findElement(By.cssSelector("td:nth-child(3)"));
-        WebElement ColunaDataNascimento = linhaDaTabela.findElement(By.cssSelector("td:nth-child(4)"));
-        return ColunaNome.getText().equals(nome) && ColunaCpf.getText().equals(cpf) && ColunaCelular.getText().equals(celular) && ColunaDataNascimento.getText().equals(DataNascimento);
-    }
+
     //Maximixa o navegador
     public void maximixaTela() {
         this.browser.manage().window().maximize();
@@ -79,6 +70,36 @@ public class sitePage {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+
+    //Confere se nome está presente na tabela
+    public boolean confereNomeNaTabela(String nomeEsperado) {
+        WebElement linhaDaTabela = this.browser.findElement(By.cssSelector("#tabela-usuarios tbody tr"));
+        WebElement ColunaNome = linhaDaTabela.findElement(By.cssSelector("td:nth-child(1)"));
+        return ColunaNome.getText().equals(nomeEsperado);
+    }
+    //Confere se cpf está presente na tabela
+    public boolean confereCpfNaTabela(String cpfEsperado) {
+        WebElement linhaDaTabela = this.browser.findElement(By.cssSelector("#tabela-usuarios tbody tr"));
+        WebElement ColunaNome = linhaDaTabela.findElement(By.cssSelector("td:nth-child(2)"));
+        return ColunaNome.getText().equals(cpfEsperado);
+    }
+    //Confere se celular está presente na tabela
+    public boolean confereCelularNaTabela(String celularEsperado) {
+        WebElement linhaDaTabela = this.browser.findElement(By.cssSelector("#tabela-usuarios tbody tr"));
+        WebElement ColunaNome = linhaDaTabela.findElement(By.cssSelector("td:nth-child(3)"));
+        return ColunaNome.getText().equals(celularEsperado);
+    }
+    //Confere se datadenascimento está presente na tabela
+    public boolean confereDataNascimentoNaTabela(String dataEsperada) {
+        WebElement linhaDaTabela = this.browser.findElement(By.cssSelector("#tabela-usuarios tbody tr"));
+        WebElement ColunaNome = linhaDaTabela.findElement(By.cssSelector("td:nth-child(4)"));
+        return ColunaNome.getText().equals(dataEsperada);
+    }
+    public void submeterFormulario() {
+        browser.findElement(By.id("btn-salvar")).click();
+
     }
 
 }

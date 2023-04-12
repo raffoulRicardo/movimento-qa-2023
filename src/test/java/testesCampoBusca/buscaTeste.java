@@ -27,19 +27,28 @@ public class buscaTeste {
 
         //Preenche o formulario e submete o formulario
         paginaBusca.preencherFormulario("Thiago Felipe Bento Farias", "312.278.644-34","(88)98986-3209","10/02/1948");
+        //SubmeteOformulario
+        paginaBusca.submeterFormulario();
+        //Preenche o formulario e submete o formulario
         paginaBusca.preencherFormulario("Cauê Ruan Rodrigues", "041.973.930-08","(61)99449-8326","06/04/1974");
+        //SubmeteOformulario
+        paginaBusca.submeterFormulario();
 
         //Realiza Busca Do Cadastro
         paginaBusca.buscarCadastro("Thiago Felipe Bento Farias");
 
         //Confere se os dados buscados estão presentes na tabela
-        Assert.assertTrue(paginaBusca.confereSeOsDadosForamInseridosNaTabela("Thiago Felipe Bento Farias", "312.278.644-34","(88)98986-3209","10/02/1948"));
+        Assert.assertTrue(paginaBusca.confereNomeNaTabela("Thiago Felipe Bento Farias"));
+        Assert.assertTrue(paginaBusca.confereCpfNaTabela("312.278.644-34"));
+        Assert.assertTrue(paginaBusca.confereCelularNaTabela("(88)98986-3209"));
+        Assert.assertTrue(paginaBusca.confereDataNascimentoNaTabela("10/02/1948"));
 
         //Retorna os dados da tabela para o console
         paginaBusca.scrap();
 
         //Espera 3 segundos antes de realizar a proxima ação
         paginaBusca.esperar(3);
+
         //verifica se há dados na tabela e caso positivo ele apaga para evitar conflito nos testes
         paginaBusca.clear();
     }

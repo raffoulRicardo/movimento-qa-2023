@@ -1,4 +1,5 @@
 package testesSite;
+import org.junit.Assert;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Order;
@@ -27,11 +28,17 @@ public class siteTeste {
      //Preenche o formulario e submete o formulario
     paginaSite.preencherFormulario("Gabriela Antônia Teixeira","062.705.378-51","(67)98617-2784","29/03/2001");
 
+    //Submete formulario
+    paginaSite.submeterFormulario();
+
     //Recarrega a pagina 10x
     paginaSite.RecarregarPagina();
 
     //Confere se os dados permanecem na tabela
-    paginaSite.confereSeOsDadosForamInseridosNaTabela("Gabriela Antônia Teixeira","062.705.378-51","(67)98617-2784","29/03/2001");
+        Assert.assertTrue(paginaSite.confereNomeNaTabela("Gabriela Antônia Teixeira"));
+        Assert.assertTrue(paginaSite.confereCpfNaTabela("062.705.378-51"));
+        Assert.assertTrue(paginaSite.confereCelularNaTabela("(67)98617-2784"));
+        Assert.assertTrue(paginaSite.confereDataNascimentoNaTabela("29/03/2001"));
 
     //Retorna os dados da tabela para o console
     paginaSite.scrap();
