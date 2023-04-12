@@ -21,6 +21,7 @@
  <br>
   :white_check_mark: Os seguintes testes foram realizados: 
   <br>
+  <br>
   -Teste de Cadastros Válidos e Exclusão de Cadastros.<br>
   <br>
   -Teste de Busca de Cadastros Válidos.<br>
