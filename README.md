@@ -1,6 +1,6 @@
-<h1 align="center"> Testes automatiazados para pagina WEB </h1>
+<h1 align="center"> Testes automatizados para página WEB </h1>
 
-<h2 align="justify">Projeto criado no movimento QA 2023 Bluesoft, onde tem como intuito automatizar testes de uma pagina web.</h2>
+<h2 align="justify">Projeto criado no movimento QA 2023 Bluesoft, onde tem como intuito automatizar testes de uma página web.</h2>
 
 
 ## 📁 O que foi utilizado para desenvolvimento do projeto? 📁
@@ -20,7 +20,7 @@
 
 
 ##  :construction: Status do projeto  :construction:
-  ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge) 
+  ![Badge Concluído](http://img.shields.io/static/v1?label=STATUS&message=%20Concluído&color=GREEN&style=for-the-badge) 
 
 
 ## 📑Quais testes foram desenvolvidos? 📑
@@ -29,9 +29,9 @@
 
 ✔️ Testes para o campo de busca.
 
-✔️ Testes para o campo de excluir usuarios.
+✔️ Testes para o campo de excluir usuários.
 
-## O que é necessario para rodar o projeto?
+## O que é necessário para rodar o projeto?
 
 Para rodar o projeto após o download, basta rodar na raíz do projeto:
 
@@ -49,10 +49,4 @@ Projeto base para testes de automatização.
 | -------- | -------- | 
 |[Alisson Macedo](https://www.linkedin.com/in/alisson-macedo-629612262/) |alissonmm61@gmail.com|
 
-<h2 align="justify">Sobre mim</h2>
-<div>
-<a href="https://github.com/Alissonmac10">
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Alissonmac10&layout=compact&langs_count=7&theme=dracula"/>
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=Alissonmac10&show_icons=true&theme=dracula&include_all_commits=true&count_private=true"/>
-</div>
 
