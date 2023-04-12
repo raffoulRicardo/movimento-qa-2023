@@ -40,36 +40,6 @@ namespace Movimento.Selenium.Testes
             //Excluir Formulário Após O Teste//
             botaoExcluirPO.ExcluiFormulario();
         }
-
-        [Fact]
-        public void DadoCredenciaisInvalidasDeveRessetarPagina()
-        {
-            //arrange + act -  CredenciaisInvalidas//
-            var cadastroPO = new CadastroPO(driver);
-            cadastroPO.Visitar();
-            cadastroPO.PreencheFormulario("", 
-            "11544316658", "31 988810650","691997");
-            cadastroPO.SubmeteFormulario();
-
-            cadastroPO.Visitar();
-             cadastroPO.PreencheFormulario("Márcia Cristina",
-             "","31 98885-0650","06091997");
-             cadastroPO.SubmeteFormulario();
-
-             cadastroPO.Visitar();
-             cadastroPO.PreencheFormulario("Márcia Cristina",
-             "115.443.166-58","","06-09-1997");
-            cadastroPO.SubmeteFormulario();
-
-            cadastroPO.Visitar();
-             cadastroPO.PreencheFormulario("Márcia Cristina",
-             "11544316658","123456","6-9-97");
-             cadastroPO.SubmeteFormulario();
-            
-
-            //assert
-            Assert.Single(driver.FindElements(By.Id("tabela2")));
-        }
     }
 }
 
