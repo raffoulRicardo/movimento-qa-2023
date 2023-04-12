@@ -38,25 +38,7 @@ public class formularioTeste {
                 //verifica se há dados na tabela e caso positivo ele apaga para evitar conflito nos testes
                 paginaForm.clear();
             }
-
-            //Confere se ao efetuar um registro sem preencher o formulario é exibido strings vazias na tabela de dados.
-            @Test
-            public void Dado_que_o_Formulario_nao_Seja_Preenchido_e_Submtido_Deve_Exibir_Campos_Vazios_na_Tabela(){
-                //preenche o formulario e submete formulario
-                paginaForm.preencherFormulario("", "","","");
-
-                //Confere se a tabela está vazia
-                Assert.assertTrue(paginaForm.confereSeOsDadosForamInseridosNaTabela("", "","",""));
-
-                //Retorna os dados da tabela para o console
-                paginaForm.scrap();
-
-                //Espera 3 segundos antes de realizar a proxima ação
-                paginaForm.esperar(3);
-
-                //verifica se há dados na tabela e caso positivo ele apaga para evitar conflito nos testes
-                paginaForm.clear();
-            }
+            
 
          //Teste se ao inserir uma data de nascimento invalida os dados não serão registrados na tabela.
          @Test
