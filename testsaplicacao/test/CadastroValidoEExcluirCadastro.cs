@@ -47,6 +47,10 @@ namespace Movimento.Selenium.Testes
 
             //Excluir Formulário Após O Teste//
             botaoExcluirPO.ExcluiFormulario();
+
+           //assert
+            Assert.Single(driver.FindElements(By.Id("tabela2")));
+
         }
     }
 }
