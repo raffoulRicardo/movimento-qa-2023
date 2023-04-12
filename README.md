@@ -1,25 +1,23 @@
 <h1 align="center"> Testes automatiazados para pagina WEB </h1>
 
-<h2 align="justify">Projeto criado no Movimento-QA 2023 pela empresa BlueSoft, com o intuito em atumoção de testes de uma pagina web.</h2>
+<h2 align="justify">Projeto criado no Movimento-QA 2023 pela empresa BlueSoft.</h2>
 
 
 
 ## O que foi utilizado para desenvolvimento do projeto?
 
+- ![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white)
+- ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white) 
+- ![Badge](https://img.shields.io/static/v1?label=Selenium&message=WebDriver&color=blue&style=for-the-badge&logo=Selenium)
 
-![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white)
-<p> Saiba mais sobre a IDE:https://www.jetbrains.com/idea/</p>
+<br>
 
-![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white) 
-<p> Saiba mais sobre JAVA:https://www.alura.com.br/artigos/java</p>
+ ```O Movimento QA, tem o intuito de formar Testadores com foco na automação de testes.```
 
-
-![Badge](https://img.shields.io/static/v1?label=Selenium&message=WebDriver&color=blue&style=for-the-badge&logo=Selenium)
-<p> Saiba mais sobre Selenium :https://www.devmedia.com.br/dominando-o-selenium-web-driver-na-pratica</p>
 
 <br><br><br>
 ## Status do projeto
-![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=BLUE&style=for-the-badge)
+> EM DESENVOLVIMENTO
 
 
 ## Quais testes foram desenvolvidos 📑
