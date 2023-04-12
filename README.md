@@ -19,7 +19,8 @@
 <h3> :open_file_folder: Os testes estão localizados na pasta: testsaplicacao/test :open_file_folder: 
  <br>
  <br>
-  :white_check_mark: Os seguintes testes foram realizados: <br>
+  :white_check_mark: Os seguintes testes foram realizados: 
+  <br>
   -Teste de Cadastros Válidos e Exclusão de Cadastros.<br>
   <br>
   -Teste de Busca de Cadastros Válidos.<br>
