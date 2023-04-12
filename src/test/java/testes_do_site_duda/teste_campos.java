@@ -7,11 +7,14 @@ public class teste_campos {
 
         @Test
         public void abrir_navegador() {
-                System.setProperty("webdriver.chrome.driver", "/drivers/chromedriver");
+                System.setProperty("webdriver.chrome.driver", "C:\\Users\\mduda\\OneDrive\\Documentos\\driver\\chromedriver.exe");
                 WebDriver browser = new ChromeDriver();
-                browser.navigate().to("http://localhost:8080/?");
+                browser.get("http://localhost:8080");
                 browser.quit();
+
         }
+
+        
 
 
 }
