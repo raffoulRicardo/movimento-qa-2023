@@ -33,15 +33,17 @@ public class teste_buscar {
 
         browser.findElement(By.id("input-search")).sendKeys("Júlia");
         browser.findElement(By.id("btn-buscar")).click();
+        browser.findElement(By.id("input-search")).clear();
 
         browser.findElement(By.id("input-search")).sendKeys("Duda");
         browser.findElement(By.id("btn-buscar")).click();
+        browser.findElement(By.id("input-search")).clear();
 
         browser.findElement(By.id("input-search")).sendKeys("Pedro");
         browser.findElement(By.id("btn-buscar")).click();
+        browser.findElement(By.id("input-search")).clear();
 
-        browser.findElement(By.id("btn-danger")).click();
-        browser.quit();
+        
 
 
     }
