@@ -1,4 +1,5 @@
-# teste-qa
+# TESTES-QA
+>Testes feitos via VsCode e C#
 
 Para rodar o projeto após o download, basta rodar na raíz do projeto:
 
