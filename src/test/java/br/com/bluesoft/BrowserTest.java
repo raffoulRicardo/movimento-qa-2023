@@ -1,6 +1,7 @@
 package br.com.bluesoft;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -22,33 +23,33 @@ public class BrowserTest {
     }
 
     @Test
-    public void findFieldsEdge(){
+    public void ValidateDisplayedFieldsEdge(){
         edgeDriver = new EdgeDriver();
-        findFields(edgeDriver);
+        ValidateDisplayedFields(edgeDriver);
     }
 
     @Test
-    public void findFieldsFirefox(){
+    public void ValidateDisplayedFieldsFirefox(){
         fireFoxDriver = new FirefoxDriver();
-        findFields(fireFoxDriver);
+        ValidateDisplayedFields(fireFoxDriver);
     }
 
     @Test
-    public void findFieldsOpera(){
+    public void ValidateDisplayedFieldsOpera(){
         operaDriver = new OperaDriver();
-        findFields(operaDriver);
+        ValidateDisplayedFields(operaDriver);
     }
 
-    private void findFields(WebDriver driver){
+    private void ValidateDisplayedFields(WebDriver driver){
         driver.get("http://localhost:8080");
-        driver.findElement(By.id("nome"));
-        driver.findElement(By.id("cpf"));
-        driver.findElement(By.id("celular"));
-        driver.findElement(By.id("dt-nascimento"));
-        driver.findElement(By.id("btn-salvar"));
-        driver.findElement(By.id("input-search"));
-        driver.findElement(By.cssSelector(".btn:nth-child(2)"));
-        driver.findElement(By.cssSelector(".btn-danger"));
+        Assert.assertTrue(driver.findElement(By.id("nome")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.id("cpf")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.id("celular")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.id("dt-nascimento")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.id("btn-salvar")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.id("input-search")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.cssSelector(".btn:nth-child(2)")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.cssSelector(".btn-danger")).isDisplayed());
         driver.quit();
     }
 
