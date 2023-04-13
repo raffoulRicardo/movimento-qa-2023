@@ -17,7 +17,6 @@ import static br.com.sumiko.testesaceitacao.DriverFactory.killDriver;
 @RunWith(Parameterized.class)
 public class TesteDeInsercao {
     private static TelaDeCadastroPage page;
-    private static DSL dsl;
     @Parameterized.Parameter
     public String nome;
     @Parameterized.Parameter(value = 1)
@@ -31,7 +30,6 @@ public class TesteDeInsercao {
     public void inicializa() {
         getDriver().get("http://localhost:8080");
         page = new TelaDeCadastroPage();
-        dsl = new DSL();
     }
 
     @After
@@ -54,10 +52,10 @@ public class TesteDeInsercao {
         page.setCPF(cpf);
         page.setCelular(celular);
         page.setDataNascimento(dataNascimento);
-        Assert.assertEquals(nome, dsl.obterValorCampo("nome"));
-        Assert.assertEquals(cpf, dsl.obterValorCampo("cpf"));
-        Assert.assertEquals(celular, dsl.obterValorCampo("celular"));
-        Assert.assertEquals(dataNascimento, dsl.obterValorCampo("dt-nascimento"));
+        Assert.assertEquals(nome, page.obterValorCampo("nome"));
+        Assert.assertEquals(cpf, page.obterValorCampo("cpf"));
+        Assert.assertEquals(celular, page.obterValorCampo("celular"));
+        Assert.assertEquals(dataNascimento, page.obterValorCampo("dt-nascimento"));
     }
 
 

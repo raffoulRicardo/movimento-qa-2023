@@ -1,11 +1,8 @@
 package br.com.sumiko.testesaceitacao;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-@NoArgsConstructor
 public class DriverFactory {
     private static WebDriver driver;
 
