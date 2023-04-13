@@ -24,15 +24,23 @@ public class CadastroTest {
         paginaDeCadastro.preencheFormulario("Pirulito Rex", "628.252.240-49", "(84) 99634-6633", "11/04/1954");
         paginaDeCadastro.clicaSalvarFormulario();
 
-//        Assert.assertTrue(paginaDeCadastro.validarCampoNome("Pirulito Rex"));
-//        Assert.assertTrue(paginaDeCadastro.validarCampoCpf("628.252.240-49"));
-//        Assert.assertTrue(paginaDeCadastro.validarCampoCelular("(84) 99634-6633"));
-//        Assert.assertTrue(paginaDeCadastro.validarCampoDtNascimento("11/04/1954"));
+        Assert.assertTrue(paginaDeCadastro.validarCampoNome("Pirulito Rex"));
+        Assert.assertTrue(paginaDeCadastro.validarCampoCpf("628.252.240-49"));
+        Assert.assertTrue(paginaDeCadastro.validarCampoCelular("(84) 99634-6633"));
+        Assert.assertTrue(paginaDeCadastro.validarCampoDtNascimento("11/04/1954"));
 
         paginaDeCadastro.fechar();
     }
-//    @Test
-//    public void BuscarPorNome(){
-//        paginaDeCadastro.buscaPorNome("Tio do Sorvete");
-//    }
+    @Test
+    public void BuscarPorNome(){
+        paginaDeCadastro.buscaPorNome("Tio do Sorvete");
+    }
+
+    @Test
+    public void ExcluirTodosOsRegistros(){
+        paginaDeCadastro.preencheFormulario("Batatinha Fritz", "228.408.768-09", "(11) 98877-6655", "01/02/1963");
+        paginaDeCadastro.clicaSalvarFormulario();
+        paginaDeCadastro.excluirTodosUsuarios();
+        paginaDeCadastro.fechar();
+    }
 }
