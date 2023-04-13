@@ -1,12 +1,16 @@
-# teste-qa
+# FormularioTests.java - Jessica Kaczmarkiewicz
+## Exercício de aplicação de conhecimentos em testes automatizados: Selenium e Chromedriver
 
-Para rodar o projeto após o download, basta rodar na raíz do projeto:
+Foi utilizada a linguagem Java e o framework JUnit para o desenvolvimento deste exercício;
 
-mvn spring-boot:run
+O projeto deve ser executado via console, através do comando "mvn spring-boot:run" na pasta do projeto;
 
-Após isso, abrir a aplicação no localhost:8080
+Trata-se de um formulário com 4 campos input (Nome completo, CPF, Celular, Data de Nascimento), 3 botões (Salvar, Buscar, Excluir Todos os Usuários) e 1 tabela de exibição do resultado da busca);
 
-É um projeto simples, com um formulário de cadastro de usuário e listagem na mesma tela.
-Existe também uma busca por nome de usuário.
+O arquivo de teste "FormularioTests.java" se encontra na pasta "src/test/java/";
 
-Projeto base para testes de automatização.
+O teste abrange todos os campos, botões e tabela existentes na aplicação;
+
+Este insere informações de cadastro válidas nos inputs e verifica se foram salvas, exibidas e excluídas corretamente;
+
+Foi desenvolvido em um único arquivo, dado a simplicidade de seu desenvolvimento e objetivo.
